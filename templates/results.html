@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Resultados - {{ survey.title if survey else sid }}</h2>
+  <div class="mb-3">
+    <h5>Exportar CSV</h5>
+    <div class="row g-2 align-items-center">
+      <div class="col-auto form-check">
+        <input class="form-check-input" type="checkbox" id="opt_anonymize">
+        <label class="form-check-label" for="opt_anonymize">Anonymize (respect respondent choice)</label>
+      </div>
+      <div class="col-auto form-check">
+        <input class="form-check-input" type="checkbox" id="opt_anonymize_all">
+        <label class="form-check-label" for="opt_anonymize_all">Anonymize all</label>
+      </div>
+      <div class="col-auto">
+        <input class="form-control" id="opt_pseudonymize" placeholder="Pseudonymize salt (optional)">
+      </div>
+      <div class="col-auto">
+        <input class="form-control" id="admin_token_input" placeholder="Admin token (or leave blank if using ?admin_token)">
+      </div>
+      <div class="col-auto">
+        <button id="download_btn" class="btn btn-primary">Descargar CSV</button>
+      </div>
+    </div>
+    <small class="form-text text-muted">Si abrió esta página con `?admin_token=...` no es necesario pegar el token aquí.</small>
+  </div>
+
+  <!-- Confirmation modal for anonymize_all -->
+  <div class="modal fade" id="confirmAnonymizeAllModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Confirmar descarga anónima completa</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Has seleccionado <strong>Anonymize all</strong>. Esto eliminará toda la información identificable en la exportación. ¿Deseas continuar?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" id="confirm_anonymize_all" class="btn btn-danger">Confirmar y descargar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h4>Respuestas ({{ responses|length }})</h4>
+  <ul>
+  {% for r in responses %}
+    <li>
+      <strong>ID {{ r.id }}</strong> - {{ r.submitted_at }}
+      <pre>{{ r.response | tojson(indent=2, ensure_ascii=false) }}</pre>
+    </li>
+  {% else %}
+    <li>No hay respuestas.</li>
+  {% endfor %}
+  </ul>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    function getQueryParam(name){
+      const params = new URLSearchParams(window.location.search);
+      return params.get(name);
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+      const btn = document.getElementById('download_btn');
+      let pendingUrl = null;
+      btn.addEventListener('click', function(){
+        const sid = '{{ sid }}';
+        const anonymize = document.getElementById('opt_anonymize').checked;
+        const anonymize_all = document.getElementById('opt_anonymize_all').checked;
+        const pseud = document.getElementById('opt_pseudonymize').value.trim();
+        let token = document.getElementById('admin_token_input').value.trim();
+        if (!token) token = getQueryParam('admin_token');
+        if (!token){
+          alert('Admin token required. Provide it in the box or add ?admin_token= to the URL.');
+          return;
+        }
+        const params = new URLSearchParams();
+        if (anonymize) params.set('anonymize','1');
+        if (anonymize_all) params.set('anonymize_all','1');
+        if (pseud) params.set('pseudonymize', pseud);
+        params.set('admin_token', token);
+        const url = `/results/${sid}/export?` + params.toString();
+
+        if (anonymize_all){
+          // show confirmation modal
+          pendingUrl = url;
+          const modalEl = document.getElementById('confirmAnonymizeAllModal');
+          const modal = new bootstrap.Modal(modalEl);
+          modal.show();
+          return;
+        }
+
+        // trigger download immediately
+        window.location = url;
+      });
+
+      // confirm modal button
+      const confirmBtn = document.getElementById('confirm_anonymize_all');
+      confirmBtn.addEventListener('click', function(){
+        if (pendingUrl){
+          window.location = pendingUrl;
+        }
+      });
+    });
+  </script>
+{% endblock %}

@@ -1,0 +1,1020 @@
+﻿* Encuesta de intoxicaciones en Pequeños Animales
+
+Objetivos
+Mediante la presente encuesta se pretende recabar información sobre las principales intoxicaciones observadas en pequeños animales atendidos en clínicas veterinarias del Uruguay. La información proporcionada deberá corresponder a casos registrados en el periodo comprendido entre junio de 2025 y la actualidad. 
+
+Los datos obtenidos serán utilizados en el marco de un proyecto de investigación CIDEC y de una tesis de grado de la Facultad de Veterinaria (UdelaR). A partir de los resultados relevados, se busca contribuir a la puesta a punto en el Laboratorio de Toxicología en dicha institución, de técnicas analíticas que permitan mejorar el diagnóstico de las intoxicaciones mencionadas. 
+
+La encuesta está organizada en tres bloques: datos generales, principales tóxicos en veterinaria y consideraciones finales. Las preguntas referidas a los principales tóxicos se agrupan en las siguientes categorías: pesticidas, medicamentos de uso veterinario, medicamentos de uso humano, plantas y miscelanea. 
+
+Completar esta encuesta le llevará solo unos minutos. Toda información proporcionada es estrictamente confidencial y se utilizará exclusivamente con fines académicos y de investigación. 
+
+1. Datos generales
+Nombre de la Clínica Veterinaria:
+Veterinaria/o responsable: opcional
+Teléfono:
+Correo electrónico:
+Dirección:
+Año de inicio: 
+N° pacientes semanal: ( ) pequeña (<20 pacientes)
+                                    ( ) mediano (20-50 pacientes)
+                                    ( ) grande (>50 pacientes)
+
+2. Intoxicaciones en pequeños animales
+Desde junio de 2025 a la fecha ¿con qué frecuencia ha tenido casos de posibles intoxicaciones?
+Especie            Semanal  Mensual  Trimestral   Ocasional (1-2 veces)   Nunca
+Canino                  ( )            ( )             ( )                        ( )                        ( ) 
+Felino                    ( )            ( )             ( )                        ( )                        ( ) 
+No tradicional        ( )            ( )             ( )                        ( )                        ( ) 
+
+En caso de que la respuesta sea nunca, no se abre la “sub encuesta” de esa especie.
+
+Ante la sospecha de un caso de intoxicación ¿ha realizado alguna consulta a otro profesional u organismo?
+Otro colega ( )
+Facultad de veterinaria ( )
+CIAT ( )
+Otros: _______________
+
+Marque la frecuencia de consultas recibidas en felinos (1 nunca - 5 más frecuente) 
+Organofosforados / carbamatos  [  ]
+Metaldehido (veneno de caracol, babosa) [  ]
+Rodenticidas anticoagulantes (veneno para ratas, warfarina) [  ]
+Piretroides y piretrinas (Cipermetrina, etc) [  ]
+Amitraz (Acarex, etc) [  ]
+Lactonas macrocíclicas (Ivermectina, etc) [  ]
+Herbicidas (Paraquat, Diquat, Glifosato, otros) [  ]
+Medicamentos de uso humano (Paracetamol, Ibuprofeno, Ácido Acetilsalicílico) [  ]
+Productos de uso domiciliario (agente corrosivo, productos de limpieza, etc) [  ]
+Chocolate [  ]
+Plantas ornamentales [  ]
+grandes grupos
+2.1 Pesticidas
+¿Ha tenido alguna consulta por sospecha de intoxicación con pesticidas en felinos desde junio de 2025 a la fecha? SI ( )  NO ( )
+Considerar si dejar pregunta de sospecha primero en la especie en cuestión y si contestan “NO” que no se desglose el resto de preguntas de pesticidas.
+Ordene según frecuencia/importancia en la consulta en felinos (1-más frecuente; 6-menos frecuente) escala 1-5 con cortes; 1 (nunca), 2 (), 3 (+20 1 c/2 semanas), 4 (), 5 (+40 1 por semana aprox)
+Herbicida [  ]
+Rodenticida [  ]
+Insecticida [  ]
+Ectocida [  ]
+Endectocida [  ]
+Molusquicida [  ]
+
+¿Cuál grupo/s de pesticidas cree usted que fue el/los causante/s de las intoxicaciones? 
+posibilidad de marcar más de una opción
+Organofosforados/ carbamatos  [  ]
+Metaldehido (veneno de caracol, babosa) [  ]
+Rodenticidas anticoagulantes (veneno para ratas, warfarina) [  ]
+Herbicidas (Paraquat, Diquat, Glifosato, otros) [  ]
+Piretroides y piretrinas (Cipermetrina, etc) [  ]
+Amitraz (Acarex, etc) [  ]
+Lactonas macrocíclicas (Ivermectina, etc) [  ]
+
+
+Datos epidemiológicos:
+cuál es la categoría más frecuente
+Categoría: ( ) Cachorro (<1 año)   ( ) Adulto (1-7 años)    ( ) Senior (>7 años)
+qué circunstancia es más frecuente
+Circunstancia: Accidental ( )  Intencional ( )
+Acceso a exterior: SI ( )  NO ( )  NS/NC ( )
+¿Macho o hembra ? 
+Para el diagnóstico usted se basó en: (permitir marcar varias opciones) 
+Anamnesis [  ]
+Signos clínicos [  ] 
+Respuesta terapéutica [  ]
+Paraclínicos [  ] (Si se marca, que se despliegue MO): hemograma, bioquímica, RX, ecografía, crasis.
+Pruebas confirmatorias [ ]
+
+En caso de haber realizado pruebas confirmatorias, indique (solo se abre si se se marcó  en confirmatorias): 
+En caso de haber realizado prueba confirmatoria, mencione 
+¿para qué caso utilizó? Desglosar opciones.
+Muestra remitida? ________________________
+Análisis: _______________________________
+Laboratorio: ____________________________
+
+En caso de NO haber realizado pruebas confirmatorias indique (solo se abre si NO se marcó confirmatorias): 
+No fue posible muestrear ( )
+Muestra insuficiente ( )
+Desconozco que haya prueba ( )
+Ningún laboratorio realiza la prueba ( )
+
+Evolución y tratamiento, según lo que usted consideró como situación más frecuente
+Recuperación sin tratamiento ( )     
+Recuperación con tratamiento ( )
+Deceso sin tratamiento ( )              
+Deceso con tratamiento ( )  
+
+2.2 Medicamentos 
+¿Ha tenido alguna consulta por sospecha de intoxicación con medicamentos de uso humano y/o veterinario desde junio de 2025 a la fecha en felinos ? SI ( )  NO ( )
+
+¿Cuál grupo de medicamentos cree usted que es más frecuente en consulta? 
+AINES (Ibuprofeno, Diclofenac) [  ]
+Benzodiacepinas (diazepam, flunitrazepam) [  ]
+Paracetamol [  ]
+Ácido acetil salicílico [  ]
+Otros: ___________________________
+
+
+
+Datos epidemiológicos
+Categoría: ( ) Cachorro (<1 año)   ( ) Adulto (1-7 años)    ( ) Senior (>7 años)
+Circunstancia: Accidental ( )  Intencional ( )
+Acceso a exterior: SI ( )  NO ( ) dato difícil de recordar para el clínico?
+
+Para el diagnóstico usted se basó en:
+Análisis [  ]
+Signos clínicos [  ] 
+Respuesta terapéutica [  ]
+Pruebas confirmatorias [  ]
+
+En caso de haber realizado pruebas confirmatorias, indique: ( solo se abre si se se marcó  en confirmatorias): 
+Muestra?  ______________________________
+Análisis: _______________________________ 
+Laboratorio: ____________________________
+
+En caso de NO haber realizado pruebas confirmatorias indique: (solo se abre si NO se marcó confirmatorias): 
+No fue posible muestrear ( )
+Muestra insuficiente ( )
+Desconozco que haya prueba ( )
+Ningún laboratorio realiza la prueba ( )
+
+Evolución y tratamiento
+Se recuperó sin tratamiento ( )     
+Se recuperó con tratamiento ( )
+Murió sin tratamiento ( )              
+Murió con tratamiento ( )  
+
+En caso de haber realizado un tratamiento indíquelo a continuación: ___________________________
+
+
+
+
+2.3 Plantas ornamentales
+¿Ha tenido alguna consulta por sospecha de intoxicación por plantas desde junio de 2025 a la fecha en felinos? SI ( )  NO ( )
+
+¿Cuáles plantas cree usted que son más frecuentes en consulta?
+¿Editamos las plantas según la especie ? Hay plantas más frecuentes en una que en otra ?
+                                                
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ninguna de las anteriores, indique cuál:___________________________
+Se desconoce la planta que provocó la intoxicación ( )
+
+
+-Agregar nombres vulgares de las plantas
+Encuesta final: Ordenar de mayor a menor importancia o tener posibilidad de selección de las más frecuentes o que han visto en consulta
+
+
+Datos epidemiológicos
+Categoría: ( ) Cachorro (<1 año)   ( ) Adulto (1-7 años)    ( ) Senior (>7 años)
+Circunstancia: Accidental ( )  Intencional ( )
+Acceso a exterior: SI ( )  NO ( ) dato difícil de recordar para el clínico?
+
+Para el diagnóstico usted se basó en:
+Análisis [  ]
+Signos clínicos [  ] 
+Respuesta terapéutica [  ]
+Pruebas confirmatorias [  ]
+
+En caso de haber realizado pruebas confirmatorias, indique: ( solo se abre si se se marcó  en confirmatorias): 
+Muestra?  ______________________________
+Análisis: _______________________________ 
+Laboratorio: ____________________________
+
+
+
+
+En caso de NO haber realizado pruebas confirmatorias indique:( solo se abre si NO se marcó confirmatorias): 
+No fue posible muestrear ( )
+Muestra insuficiente ( )
+Desconozco que haya prueba ( )
+Ningún laboratorio realiza la prueba ( )
+
+Evolución y tratamiento
+Se recuperó sin tratamiento ( )     
+Se recuperó con tratamiento ( )
+Murió sin tratamiento ( )              
+Murió con tratamiento ( )  
+
+En caso de haber realizado un tratamiento indíquelo a continuación: ___________________________
+
+
+2.4 Alimentos:  
+¿Ha tenido alguna consulta por sospecha de intoxicación por alimentos desde junio de 2025 a la fecha en felinos? SI ( )  NO ( )
+
+
+¿Qué alimento cree usted que es más frecuente en la consulta?
+Chocolate  [  ]
+Masas   [  ]
+Cebolla  [  ]
+Ajo   [  ]
+Puerro   [  ]
+Uvas [  ]
+
+Otros:  ___________________________
+
+
+Datos epidemiológicos
+Categoría: ( ) Cachorro (<1 año)   ( ) Adulto (1-7 años)    ( ) Senior (>7 años)
+Circunstancia: Accidental ( )  Intencional ( )
+Acceso a exterior: SI ( )  NO ( ) dato difícil de recordar para el clínico?
+
+
+Para el diagnóstico usted se basó en:
+Anamnesis [  ] Análisis/paraclínicos, saber en cual análisis se basaron? o anamnesis?
+Signos clínicos [  ] 
+Respuesta terapéutica [  ]
+Pruebas confirmatorias [  ]
+
+En caso de haber realizado pruebas confirmatorias, indique: ( solo se abre si se se marcó  en confirmatorias): 
+Muestra a remitir?  _______________________
+Análisis: _______________________________ 
+Laboratorio: ____________________________
+
+
+Evolución y tratamiento (sumar: no fue posible tratar, no fue posible acceder al tto, no existe tto, desconozco que exista, etc?)
+Se recuperó sin tratamiento ( )     
+Se recuperó con tratamiento ( )
+Murió sin tratamiento ( )              
+Murió con tratamiento ( )  
+
+En caso de haber realizado un tratamiento indíquelo a continuación: ___________________________
+
+
+
+
+2.5 Agentes, productos de limpieza (agregar en otros agentes tóxicos o no?)
+¿Ha tenido alguna consulta por sospecha de intoxicación por agentes corrosivos, productos de limpieza/otros, desde junio de 2025 a la fecha en felinos? SI ( )  NO ( )
+
+
+¿Qué agente corrosivo o producto de limpieza cree usted que es más frecuente en la consulta?
+Alcohol 
+Lavandina
+Amonio cuaternario
+más ejemplos 
+Otros : ___________________________
+
+
+Datos epidemiológicos
+Categoría: ( ) Cachorro (<1 año)   ( ) Adulto (1-7 años)    ( ) Senior (>7 años)
+Circunstancia: Accidental ( )  Intencional ( )
+Acceso a exterior: SI ( )  NO ( ) 
+
+
+Para el diagnóstico usted se basó en:
+Anamnesis [  ]
+Signos clínicos [  ] 
+Respuesta terapéutica [  ]
+Pruebas confirmatorias [  ]
+
+En caso de haber realizado pruebas confirmatorias, indique: ( solo se abre si se se marcó  en confirmatorias): 
+Muestra a remitir?  _______________________
+Análisis: _______________________________ 
+Laboratorio: ____________________________
+
+Evolución y tratamiento (sumar: no fue posible tratar, no fue posible acceder al tto, no existe tto, desconozco que exista, etc?)
+Se recuperó sin tratamiento ( )     
+Se recuperó con tratamiento ( )
+Murió sin tratamiento ( )              
+Murió con tratamiento ( )  
+
+En caso de haber realizado un tratamiento indíquelo a continuación: ___________________________
+
+
+Cuadro de texto sobre otros agentes tóxicos para completar si quiere:
+Hay alguna intoxicación en felinos que no te preguntamos, que quieras aclarar… etc
+(indicar principio activo o nombre comercial/datos epidemiológicos, diagnóstico y tratamiento si se realizó).
+
+
+
+
+ENCUESTA PERRO: (se desglosa si seleccionan alguna frecuencia de intoxicación en caninos en especies afectadas)
+
+Enumere por el orden de frecuencia de consultas recibidas caninos  (1-más frecuente; 11 menos frecuente)
+Organofosforados/ carbamatos  [  ]
+Metaldehido (veneno de caracol, babosa) [  ]
+Rodenticidas anticoagulantes (veneno para ratas, warfarina) [  ]
+Piretroides y piretrinas (Cipermetrina, etc) [  ]
+Amitraz (Acarex, etc) [  ]
+Lactonas macrocíclicas (Ivermectina, etc) [  ]
+Herbicidas (Paraquat, Diquat, Glifosato, otros) [  ]
+Medicamentos de uso humano (Paracetamol, Ibuprofeno, Ácido Acetilsalicílico) [  ]
+Productos de uso domiciliario (agente corrosivo, productos de limpieza, etc) [  ]
+Chocolate [  ]
+Plantas ornamentales [  ]
+
+
+
+
+2.1 Pesticidas
+¿Ha tenido alguna consulta por sospecha de intoxicación con pesticidas en caninos desde junio de 2025 a la fecha? SI ( )  NO ( )
+Considerar si dejar pregunta de sospecha primero en la especie en cuestión y si contestan “NO” que no se desglose el resto de preguntas de pesticidas o, primero consultar frecuencia/importancia según su experiencia (quizás nunca tuvieron consulta pero saben de otros casos) y luego si tuvieron en su clínica para continuar o no.
+
+
+Ordene según frecuencia/importancia en la consulta en caninos (1-más frecuente; 6-menos frecuente)
+Herbicida [  ]
+Rodenticida [  ]
+Insecticida [  ]
+Ectocida [  ]
+Endectocida [  ]
+Molusquicida [  ]
+
+¿Cuál grupo de pesticidas cree usted que fue el causante de las intoxicaciones? 
+posibilidad de marcar más de una opción
+Organofosforados/ carbamatos  ( )
+Metaldehido (veneno de caracol, babosa) ( )
+Rodenticidas anticoagulantes (veneno para ratas, warfarina) ( )
+Herbicidas (Paraquat, Diquat, Glifosato, otros) ( )
+Piretroides y piretrinas (Cipermetrina, etc) ( )
+Amitraz (Acarex, etc) ( )
+Lactonas macrocíclicas (Ivermectina, etc) ( )
+
+
+Datos epidemiológicos
+Categoría: ( ) Cachorro (<1 año)   ( ) Adulto (1-7 años)    ( ) Senior (>7 años)
+Circunstancia: Accidental ( )  Intencional ( )
+Acceso a exterior: SI ( )  NO ( ) dato difícil de recordar para el clínico?
+¿Macho o hembra ? 
+
+Para el diagnóstico usted se basó en ( deja marcar varias opciones):
+Análisis [  ]
+Signos clínicos [  ] 
+Respuesta terapéutica [  ]
+Pruebas confirmatorias [  ]
+
+En caso de haber realizado pruebas confirmatorias, indique ( solo se abre si se se marcó  en confirmatorias): 
+Muestra remitida? _______________________
+Análisis: _______________________________
+Laboratorio: ____________________________
+
+En caso de NO haber realizado pruebas confirmatorias indique ( solo se abre si NO se marcó confirmatorias): 
+No fue posible muestrear ( )
+Muestra insuficiente ( )
+Desconozco que haya prueba ( )
+Ningún laboratorio realiza la prueba ( )
+
+Evolución y tratamiento
+Se recuperó sin tratamiento ( )     
+Se recuperó con tratamiento ( )
+Murió sin tratamiento ( )              
+Murió con tratamiento ( )  
+
+En caso de haber realizado un tratamiento indíquelo a continuación: ___________________________
+
+2.2 Medicamentos 
+¿Ha tenido alguna consulta por sospecha de intoxicación con medicamentos de uso humano y/o veterinario desde junio de 2025 a la fecha en caninos ? SI ( )  NO ( )
+Considerar si dejar pregunta de sospecha primero en la especie en cuestión y si contestan “NO” que no se desglose el resto de preguntas de intoxi por medicamentos  o, primero consultar frecuencia/importancia según su experiencia (quizás nunca tuvieron consulta pero saben de otros casos) y luego si tuvieron en su clínica para continuar o no.
+
+
+
+¿Cuál grupo de medicamentos cree usted que es más frecuente en consulta? 
+AINES (Ibuprofeno, Diclofenac) [  ]
+Paracetamol [  ]
+Ácido acetil salicílico [  ]
+Otros: ___________________________
+
+
+
+Datos epidemiológicos
+Categoría: ( ) Cachorro (<1 año)   ( ) Adulto (1-7 años)    ( ) Senior (>7 años)
+Circunstancia: Accidental ( )  Intencional ( )
+Acceso a exterior: SI ( )  NO ( ) dato difícil de recordar para el clínico?
+
+Para el diagnóstico usted se basó en:
+Análisis [  ]
+Signos clínicos [  ] 
+Respuesta terapéutica [  ]
+Pruebas confirmatorias [  ]
+
+En caso de haber realizado pruebas confirmatorias, indique: ( solo se abre si se se marcó  en confirmatorias): 
+Muestra?  ______________________________
+Análisis: _______________________________ 
+Laboratorio: ____________________________
+
+En caso de NO haber realizado pruebas confirmatorias indique:( solo se abre si NO se marcó confirmatorias): 
+
+No fue posible muestrear ( )
+Muestra insuficiente ( )
+Desconozco que haya prueba ( )
+Ningún laboratorio realiza la prueba ( )
+
+Evolución y tratamiento
+Se recuperó sin tratamiento ( )     
+Se recuperó con tratamiento ( )
+Murió sin tratamiento ( )              
+Murió con tratamiento ( )  
+
+En caso de haber realizado un tratamiento indíquelo a continuación: ___________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.3 Plantas ornamentales
+¿Ha tenido alguna consulta por sospecha de intoxicación por plantas desde junio de 2025 a la fecha en caninos? SI ( )  NO ( )
+
+¿Cuáles plantas cree usted que son más frecuentes en consulta?
+                                                
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ninguna de las anteriores, indique cuál:___________________________
+Se desconoce la planta que provocó la intoxicación ( )
+
+
+-Agregar nombres vulgares de las plantas
+Encuesta final: Ordenar de mayor a menor importancia o tener posibilidad de selección de las más frecuentes o que han visto en consulta
+
+
+Datos epidemiológicos
+Categoría: ( ) Cachorro (<1 año)   ( ) Adulto (1-7 años)    ( ) Senior (>7 años)
+Circunstancia: Accidental ( )  Intencional ( )
+Acceso a exterior: SI ( )  NO ( ) dato difícil de recordar para el clínico?
+
+Para el diagnóstico usted se basó en:
+Análisis [  ]
+Signos clínicos [  ] 
+Respuesta terapéutica [  ]
+Pruebas confirmatorias [  ]
+
+En caso de haber realizado pruebas confirmatorias, indique: ( solo se abre si se se marcó  en confirmatorias): 
+Muestra?  ______________________________
+Análisis: _______________________________ 
+Laboratorio: ____________________________
+
+
+
+
+En caso de NO haber realizado pruebas confirmatorias indique:( solo se abre si NO se marcó confirmatorias): 
+No fue posible muestrear ( )
+Muestra insuficiente ( )
+Desconozco que haya prueba ( )
+Ningún laboratorio realiza la prueba ( )
+
+Evolución y tratamiento
+Se recuperó sin tratamiento ( )     
+Se recuperó con tratamiento ( )
+Murió sin tratamiento ( )              
+Murió con tratamiento ( )  
+
+En caso de haber realizado un tratamiento indíquelo a continuación: ___________________________
+
+
+2.4 Alimentos:  
+¿Ha tenido alguna consulta por sospecha de intoxicación por alimentos desde junio de 2025 a la fecha en caninos? SI ( )  NO ( )
+
+
+¿Qué alimento cree usted que es más frecuente en la consulta?
+Chocolate  [  ]
+Masas   [  ]
+Cebolla  [  ]
+Ajo   [  ]
+Puerro   [  ]
+Uvas [  ]
+Xilitol  [  ]
+Otros:  ___________________________
+
+
+Datos epidemiológicos
+Categoría: ( ) Cachorro (<1 año)   ( ) Adulto (1-7 años)    ( ) Senior (>7 años)
+Circunstancia: Accidental ( )  Intencional ( )
+Acceso a exterior: SI ( )  NO ( ) dato difícil de recordar para el clínico?
+
+
+Para el diagnóstico usted se basó en:
+Anamnesis [  ] Análisis/paraclínicos, saber en cual análisis se basaron? o anamnesis?
+Signos clínicos [  ] 
+Respuesta terapéutica [  ]
+Pruebas confirmatorias [  ]
+
+En caso de haber realizado pruebas confirmatorias, indique: ( solo se abre si se se marcó  en confirmatorias): 
+Muestra a remitir?  _______________________
+Análisis: _______________________________ 
+Laboratorio: ____________________________
+
+
+Evolución y tratamiento (sumar: no fue posible tratar, no fue posible acceder al tto, no existe tto, desconozco que exista, etc?)
+Se recuperó sin tratamiento ( )     
+Se recuperó con tratamiento ( )
+Murió sin tratamiento ( )              
+Murió con tratamiento ( )  
+
+En caso de haber realizado un tratamiento indíquelo a continuación: ___________________________
+
+
+
+
+2.5 Agentes, productos de limpieza (agregar en otros agentes tóxicos o no?)
+¿Ha tenido alguna consulta por sospecha de intoxicación por agentes corrosivos, productos de limpieza/otros, desde junio de 2025 a la fecha en felinos? SI ( )  NO ( )
+
+
+¿Qué agente corrosivo o producto de limpieza cree usted que es más frecuente en la consulta?
+Alcohol 
+Lavandina
+Amonio cuaternario
+Popurri 
+Soda caustica
+más ejemplos 
+Otros : ___________________________
+
+
+Datos epidemiológicos
+Categoría: ( ) Cachorro (<1 año)   ( ) Adulto (1-7 años)    ( ) Senior (>7 años)
+Circunstancia: Accidental ( )  Intencional ( )
+Acceso a exterior: SI ( )  NO ( ) 
+
+
+Para el diagnóstico usted se basó en:
+Anamnesis [  ]
+Signos clínicos [  ] 
+Respuesta terapéutica [  ]
+Pruebas confirmatorias [  ]
+
+En caso de haber realizado pruebas confirmatorias, indique: ( solo se abre si se se marcó  en confirmatorias): 
+Muestra a remitir?  _______________________
+Análisis: _______________________________ 
+Laboratorio: ____________________________
+
+Evolución y tratamiento (sumar: no fue posible tratar, no fue posible acceder al tto, no existe tto, desconozco que exista, etc?)
+Se recuperó sin tratamiento ( )     
+Se recuperó con tratamiento ( )
+Murió sin tratamiento ( )              
+Murió con tratamiento ( )  
+
+En caso de haber realizado un tratamiento indíquelo a continuación: ___________________________
+
+
+Cuadro de texto sobre otros agentes tóxicos para completar si quiere:
+Hay alguna intoxicación en caninos que no te preguntamos, que quieras aclarar… etc
+(indicar principio activo o nombre comercial/datos epidemiológicos, diagnóstico y tratamiento si se realizó).
+
+
+ANIMALES NO TRADICIONALES:
+
+
+Enumere por el orden de frecuencia de consultas recibidas por intoxicaciones de animales no tradicionales (1-más frecuente; 11 menos frecuente)
+Organofosforados/ carbamatos  [  ]
+Metaldehido (veneno de caracol, babosa) [  ]
+Rodenticidas anticoagulantes (veneno para ratas, warfarina) [  ]
+Piretroides y piretrinas (Cipermetrina, etc) [  ]
+Amitraz (Acarex, etc) [  ]
+Lactonas macrocíclicas (Ivermectina, etc) [  ]
+Herbicidas (Paraquat, Diquat, Glifosato, otros) [  ]
+Medicamentos de uso humano (Paracetamol, Ibuprofeno, Ácido Acetilsalicílico) [  ]
+Productos de uso domiciliario (agente corrosivo, productos de limpieza, etc) [  ]
+Chocolate [  ]
+Plantas ornamentales [  ]
+
+
+
+
+2.1 Pesticidas
+¿Ha tenido alguna consulta por sospecha de intoxicación con pesticidas en animales no tradicionales  desde junio de 2025 a la fecha? SI ( )  NO ( )
+Considerar si dejar pregunta de sospecha primero en la especie en cuestión y si contestan “NO” que no se desglose el resto de preguntas de pesticidas o, primero consultar frecuencia/importancia según su experiencia (quizás nunca tuvieron consulta pero saben de otros casos) y luego si tuvieron en su clínica para continuar o no.
+
+
+¿En qué especie de Animales no tradicionales vio intoxicación en la clínica ?
+
+
+Conejo ( )
+Rata ( )
+Cobayo ( )
+Hamster ( )
+Loro ( )
+Huron ( )
+Erizo ( ) 
+Tortuga ( )
+Reptiles ( si marca sí, que aparezca opción para poner cual)
+Otros  ____________________________
+
+
+Ordene según frecuencia/importancia en la consulta  en animales no tradicionales (1-más frecuente; 6-menos frecuente)
+Herbicida [  ]
+Rodenticida [  ]
+Insecticida [  ]
+Ectocida [  ]
+Endectocida [  ]
+Molusquicida [  ]
+
+
+
+
+¿Cuál grupo de pesticidas cree usted que fue el causante de las intoxicaciones? 
+posibilidad de marcar más de una opción
+Organofosforados/ carbamatos  ( )
+Metaldehido (veneno de caracol, babosa) ( )
+Rodenticidas anticoagulantes (veneno para ratas, warfarina) ( )
+Herbicidas (Paraquat, Diquat, Glifosato, otros) ( )
+Piretroides y piretrinas (Cipermetrina, etc) ( )
+Amitraz (Acarex, etc) ( )
+Lactonas macrocíclicas (Ivermectina, etc) ( )
+
+
+Datos epidemiológicos
+Categoría: ( ) Cachorro (<1 año)   ( ) Adulto (1-7 años)    ( ) Senior (>7 años)
+Circunstancia: Accidental ( )  Intencional ( )
+Acceso a exterior: SI ( )  NO ( ) dato difícil de recordar para el clínico?
+¿Macho o hembra ? 
+
+
+
+Para el diagnóstico usted se basó en ( deja marcar varias opciones):
+Análisis [  ]
+Signos clínicos [  ] 
+Respuesta terapéutica [  ]
+Pruebas confirmatorias [  ]
+
+En caso de haber realizado pruebas confirmatorias, indique ( solo se abre si se se marcó  en confirmatorias): 
+Muestra remitida? _______________________
+Análisis: _______________________________
+Laboratorio: ____________________________
+
+En caso de NO haber realizado pruebas confirmatorias indique ( solo se abre si NO se marcó confirmatorias): 
+No fue posible muestrear ( )
+Muestra insuficiente ( )
+Desconozco que haya prueba ( )
+Ningún laboratorio realiza la prueba ( )
+
+Evolución y tratamiento
+Se recuperó sin tratamiento ( )     
+Se recuperó con tratamiento ( )
+Murió sin tratamiento ( )              
+Murió con tratamiento ( )  
+
+En caso de haber realizado un tratamiento indíquelo a continuación: ___________________________
+
+2.2 Medicamentos 
+¿Ha tenido alguna consulta por sospecha de intoxicación con medicamentos de uso humano y/o veterinario desde junio de 2025 a la fecha  en animales no tradicionales ? SI ( )  NO ( )
+Considerar si dejar pregunta de sospecha primero en la especie en cuestión y si contestan “NO” que no se desglose el resto de preguntas de intoxi por medicamentos  o, primero consultar frecuencia/importancia según su experiencia (quizás nunca tuvieron consulta pero saben de otros casos) y luego si tuvieron en su clínica para continuar o no.
+
+
+¿En qué especie de Animales no tradicionales vio intoxicación en la clínica ?
+
+
+Conejo ( )
+Rata ( )
+Cobayo ( )
+Hamster ( )
+Loro ( )
+Huron ( )
+Erizo ( ) 
+Tortuga ( )
+Reptiles ( si marca sí, que aparezca opción para poner cual)
+Otros  ____________________________
+
+
+
+¿Cuál grupo de medicamentos cree usted que es más frecuente en consulta? 
+AINES (Ibuprofeno, Diclofenac) [  ]
+Paracetamol [  ]
+Ácido acetil salicílico [  ]
+Otros: ___________________________
+
+
+
+Datos epidemiológicos
+Categoría: ( ) Cachorro   ( ) Adulto    ( ) Senior  edades de no tradicionales?
+Circunstancia: Accidental ( )  Intencional ( )
+Acceso a exterior: SI ( )  NO ( ) dato difícil de recordar para el clínico?
+
+Para el diagnóstico usted se basó en:
+Análisis [  ]
+Signos clínicos [  ] 
+Respuesta terapéutica [  ]
+Pruebas confirmatorias [  ]
+
+En caso de haber realizado pruebas confirmatorias, indique: ( solo se abre si se se marcó  en confirmatorias): 
+Muestra?  ______________________________
+Análisis: _______________________________ 
+Laboratorio: ____________________________
+
+En caso de NO haber realizado pruebas confirmatorias indique:( solo se abre si NO se marcó confirmatorias): 
+
+No fue posible muestrear ( )
+Muestra insuficiente ( )
+Desconozco que haya prueba ( )
+Ningún laboratorio realiza la prueba ( )
+
+Evolución y tratamiento
+Se recuperó sin tratamiento ( )     
+Se recuperó con tratamiento ( )
+Murió sin tratamiento ( )              
+Murió con tratamiento ( )  
+
+En caso de haber realizado un tratamiento indíquelo a continuación: ___________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.3 Plantas ornamentales
+¿Ha tenido alguna consulta por sospecha de intoxicación por plantas desde junio de 2025 a la fecha  en animales no tradicionales ? SI ( )  NO ( )
+¿En qué especie de Animales no tradicionales vio intoxicación en la clínica ?
+
+
+Conejo ( )
+Rata ( )
+Cobayo ( )
+Hamster ( )
+Loro ( )
+Huron ( )
+Erizo ( ) 
+Tortuga ( )
+Reptiles ( si marca sí, que aparezca opción para poner cual)
+Otros  ____________________________
+
+
+
+¿Cuáles plantas cree usted que son más frecuentes en consulta?
+                                                
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ninguna de las anteriores, indique cuál:___________________________
+Se desconoce la planta que provocó la intoxicación ( )
+
+
+-Agregar nombres vulgares de las plantas
+Encuesta final: Ordenar de mayor a menor importancia o tener posibilidad de selección de las más frecuentes o que han visto en consulta
+
+
+Datos epidemiológicos
+Categoría: ( ) Cachorro   ( ) Adulto    ( ) Senior edades de no tradicionales?
+Circunstancia: Accidental ( )  Intencional ( )
+Acceso a exterior: SI ( )  NO ( ) dato difícil de recordar para el clínico?
+
+Para el diagnóstico usted se basó en:
+Análisis [  ]
+Signos clínicos [  ] 
+Respuesta terapéutica [  ]
+Pruebas confirmatorias [  ]
+
+En caso de haber realizado pruebas confirmatorias, indique: ( solo se abre si se se marcó  en confirmatorias): 
+Muestra?  ______________________________
+Análisis: _______________________________ 
+Laboratorio: ____________________________
+
+
+
+
+En caso de NO haber realizado pruebas confirmatorias indique:( solo se abre si NO se marcó confirmatorias): 
+No fue posible muestrear ( )
+Muestra insuficiente ( )
+Desconozco que haya prueba ( )
+Ningún laboratorio realiza la prueba ( )
+
+Evolución y tratamiento
+Se recuperó sin tratamiento ( )     
+Se recuperó con tratamiento ( )
+Murió sin tratamiento ( )              
+Murió con tratamiento ( )  
+
+En caso de haber realizado un tratamiento indíquelo a continuación: ___________________________
+
+
+2.4 Alimentos:  
+¿Ha tenido alguna consulta por sospecha de intoxicación por alimentos desde junio de 2025 a la fecha  en animales no tradicionales ? SI ( )  NO ( )
+
+
+¿En qué especie de Animales no tradicionales vio intoxicación en la clínica ?
+
+
+Conejo ( )
+Rata ( )
+Cobayo ( )
+Hamster ( )
+Loro ( )
+Huron ( )
+Erizo ( ) 
+Tortuga ( )
+Reptiles ( si marca sí, que aparezca opción para poner cual)
+Otros  ____________________________
+
+
+¿Qué alimento cree usted que es más frecuente en la consulta?
+Chocolate  [  ]
+Masas   [  ]
+Cebolla  [  ]
+Ajo   [  ]
+Puerro   [  ]
+Uvas [  ]
+Cannabis [  ]  en que categoría entra ?
+Otros:  ___________________________
+
+
+Datos epidemiológicos
+Categoría: ( ) Cachorro  ( ) Adulto   ( ) Senior edades de no tradicionales?
+Circunstancia: Accidental ( )  Intencional ( )
+Acceso a exterior: SI ( )  NO ( ) dato difícil de recordar para el clínico?
+
+
+
+
+
+
+
+
+Para el diagnóstico usted se basó en:
+Anamnesis [  ] Análisis/paraclínicos, saber en cual análisis se basaron? o anamnesis?
+Signos clínicos [  ] 
+Respuesta terapéutica [  ]
+Pruebas confirmatorias [  ]
+
+En caso de haber realizado pruebas confirmatorias, indique: ( solo se abre si se se marcó  en confirmatorias): 
+Muestra a remitir?  _______________________
+Análisis: _______________________________ 
+Laboratorio: ____________________________
+
+
+Evolución y tratamiento (sumar: no fue posible tratar, no fue posible acceder al tto, no existe tto, desconozco que exista, etc?)
+Se recuperó sin tratamiento ( )     
+Se recuperó con tratamiento ( )
+Murió sin tratamiento ( )              
+Murió con tratamiento ( )  
+
+En caso de haber realizado un tratamiento indíquelo a continuación: ___________________________
+
+
+
+
+2.5 Agentes, productos de limpieza (agregar en otros agentes tóxicos o no?)
+¿Ha tenido alguna consulta por sospecha de intoxicación por agentes corrosivos, productos de limpieza/otros, desde junio de 2025 a la fecha en animales no tradicionales ? SI ( )  NO ( )
+
+
+
+
+
+
+¿Qué agente corrosivo o producto de limpieza cree usted que es más frecuente en la consulta?
+Alcohol 
+Lavandina
+más ejemplos 
+Otros : ___________________________
+
+
+Datos epidemiológicos
+Categoría: ( ) Cachorro    ( ) Adulto   ( ) Senior edades de no tradicionales?
+Circunstancia: Accidental ( )  Intencional ( )
+Acceso a exterior: SI ( )  NO ( ) 
+
+
+Para el diagnóstico usted se basó en:
+Anamnesis [  ]
+Signos clínicos [  ] 
+Respuesta terapéutica [  ]
+Pruebas confirmatorias [  ]
+
+En caso de haber realizado pruebas confirmatorias, indique: ( solo se abre si se se marcó  en confirmatorias): 
+Muestra a remitir?  _______________________
+Análisis: _______________________________ 
+Laboratorio: ____________________________
+
+Evolución y tratamiento (sumar: no fue posible tratar, no fue posible acceder al tto, no existe tto, desconozco que exista, etc?)
+Se recuperó sin tratamiento ( )     
+Se recuperó con tratamiento ( )
+Murió sin tratamiento ( )              
+Murió con tratamiento ( )  
+
+En caso de haber realizado un tratamiento indíquelo a continuación: ___________________________
+
+
+Cuadro de texto sobre otros agentes tóxicos para completar si quiere:
+Hay alguna intoxicación  en animales no tradicionales que no te preguntamos, que quieras aclarar… etc
+(indicar principio activo o nombre comercial/datos epidemiológicos, diagnóstico y tratamiento si se realizó).
+
+
+
+
+Resumen final:
+¿Cree usted que en nuestro medio existen carencias para el diagnóstico de intoxicaciones?
+si ( )
+no ( )
+
+
+¿Ha contactado al Área de Toxicología de Facultad de Veterinaria en alguna ocasión?
+En caso afirmativo, la respuesta obtenida fue: 
+Satisfactoria ( )
+No satisfactoria ( )
+
+En caso negativo, ha sido porque:
+No lo he necesitado ( ) 
+No lo he considerado ( )
+
+
+¿Ante qué intoxicación considera usted que le sería de importancia contar con una prueba diagnóstica?  _______________________
+(cuadro de texto para completar obligatorio)
+
+
+¿Cómo cree usted que el Área de Toxicología de Facultad de Veterinaria puede contribuir en los diagnósticos? puede elegir más de una opción
+Análisis diagnósticos ( )
+Cursos de actualización ( ) 
+Comunicaciones periódicas en redes sociales ( )
+Otros medios (especifique):  _______________________
+
+
+3.Consideraciones, intoxicaciones y/o comentarios que quiera agregar: (cuadro de texto no obligatorio)
+
+Le agradecemos sinceramente por participar en este relevamiento. 
+Su contribución será de gran utilidad para el desarrollo académico y científico de la Facultad de Veterinaria (UdelaR).

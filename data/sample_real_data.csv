@@ -1,0 +1,4 @@
+owner_name,contact_email,respondent_anonymous,species,age_years,weight_kg,exposure_date,substance_known,substance_name,exposure_route,vomiting,diarrhea,convulsions,respiratory_distress,first_aid_given,went_to_vet,outcome,consent_data_use,allow_contact,comments
+Juan Perez,juan.perez@example.com,NO,Perro,3,12,2026-04-10 14:00,SI,Planta X,Oral,SI,NO,NO,NO,SI,SI,Recuperado,SI,SI,Paciente observado
+,,SI,Gato,2,4,2026-04-11 09:30,NO,,Oral,NO,NO,NO,NO,NO,NO,Desconocido,SI,NO,Anónimo
+Maria Lopez,maria.lopez@example.com,NO,Perro,5,20,2026-04-12 18:45,NO,,Cutánea,NO,SI,NO,NO,NO,SI,En tratamiento,SI,SI,Aplicó enjuague

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>{{ survey.title }}</h2>
+  <p>{{ description or survey.description }}</p>
+  <form id="surveyForm" novalidate>
+    {% for q in survey.questions %}
+      <div class="mb-3 question" id="q-{{ q.name }}" {% if q.showIf %}data-show-if='{{ q.showIf|tojson }}'{% endif %} {% if q.validation %}data-validation='{{ q.validation|tojson }}'{% endif %}>
+        <label class="form-label">{{ q.label }} {% if q.required %}*{% endif %}</label>
+        {% if q.type == 'radio' %}
+          <div>
+            {% for opt in q.options %}
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="{{ q.name }}" value="{{ opt }}" id="{{ q.name }}_{{ loop.index }}" {% if q.required and loop.first %}required{% endif %}>
+                <label class="form-check-label" for="{{ q.name }}_{{ loop.index }}">{{ opt }}</label>
+              </div>
+            {% endfor %}
+            <div class="invalid-feedback"></div>
+          </div>
+        {% elif q.type == 'text' %}
+          <input class="form-control" type="text" name="{{ q.name }}" {% if q.required %}required{% endif %} {% if q.validation and q.validation.pattern %}pattern="{{ q.validation.pattern }}"{% endif %}>
+          <div class="invalid-feedback"></div>
+        {% elif q.type == 'textarea' %}
+          <textarea class="form-control" name="{{ q.name }}" {% if q.required %}required{% endif %} {% if q.validation and q.validation.pattern %}data-pattern="{{ q.validation.pattern }}"{% endif %}></textarea>
+          <div class="invalid-feedback"></div>
+        {% elif q.type == 'select' %}
+          <select class="form-select" name="{{ q.name }}" {% if q.required %}required{% endif %}>
+            <option value="">-- Seleccione --</option>
+            {% for opt in q.options %}
+              <option value="{{ opt }}">{{ opt }}</option>
+            {% endfor %}
+          </select>
+          <div class="invalid-feedback"></div>
+        {% endif %}
+      </div>
+    {% endfor %}
+    <button class="btn btn-primary" type="submit">Enviar</button>
+  </form>
+  <div id="message" class="mt-3"></div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="/static/js/survey.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      Survey.init();
+      const form = document.getElementById('surveyForm');
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        if (!Survey.validateForm()) return;
+        const fd = new FormData(form);
+        const obj = {};
+        for (const [k,v] of fd.entries()){
+          if (obj[k] === undefined) obj[k] = v;
+          else if (Array.isArray(obj[k])) obj[k].push(v);
+          else obj[k] = [obj[k], v];
+        }
+        fetch('/submit/{{ sid }}', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(obj)})
+          .then(async r=>{
+            if (!r.ok){
+              const err = await r.json().catch(()=>({errors:['Error desconocido']}));
+              const msg = (err.errors||[]).join('<br>');
+              document.getElementById('message').innerHTML = `<div class="alert alert-danger">${msg}</div>`;
+              return;
+            }
+            return r.json();
+          })
+          .then(d=>{
+            if (!d) return;
+            document.getElementById('message').innerHTML = '<div class="alert alert-success">Gracias por su respuesta.</div>';
+            form.reset();
+            Survey.updateVisibility();
+          })
+          .catch(err=>{
+            document.getElementById('message').innerHTML = '<div class="alert alert-danger">Error al enviar.</div>';
+          });
+      });
+    });
+  </script>
+{% endblock %}
