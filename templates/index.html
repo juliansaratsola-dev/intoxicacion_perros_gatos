@@ -3,7 +3,7 @@
 <h1>Encuestas disponibles</h1>
 <ul>
   {% for s in surveys %}
-    <li><a href="/survey/{{ s.id }}">{{ s.title }}</a></li>
+    <li><a href="/surveys/{{ s.id }}">{{ s.title }}</a></li>
   {% else %}
     <li>No hay encuestas. Coloca archivos JSON en la carpeta <strong>surveys</strong>.</li>
   {% endfor %}

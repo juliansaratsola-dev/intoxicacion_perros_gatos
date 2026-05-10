@@ -1,23 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SurveyList = () => {
-  const [surveys, setSurveys] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('/surveys')
-      .then((response) => response.json())
-      .then((data) => setSurveys(data.surveys))
-      .catch((error) => console.error('Error fetching surveys:', error));
-  }, []);
+    // Redirect directly to the main survey
+    navigate('/surveys/main_encuesta');
+  }, [navigate]);
 
   return (
-    <div>
-      <h1>Lista de Encuestas</h1>
-      <ul>
-        {surveys.map((survey) => (
-          <li key={survey.id}>{survey.title}</li>
-        ))}
-      </ul>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', fontFamily: 'sans-serif', color: '#9333ea' }}>
+      <p>Redirigiendo a la encuesta...</p>
     </div>
   );
 };

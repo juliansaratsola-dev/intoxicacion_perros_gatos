@@ -1,0 +1,1180 @@
+{
+  "title": "Encuesta de intoxicaciones en pequeños animales",
+  "description": "Mediante la presente encuesta se pretende recabar información sobre las principales intoxicaciones observadas en pequeños animales atendidos en clínicas veterinarias del Uruguay. La información proporcionada deberá corresponder a casos registrados en el período comprendido entre junio de 2025 y la actualidad.",
+  "questions": [
+    {
+      "id": "1",
+      "text": "Se le invita a participar de manera voluntaria en esta encuesta. La información proporcionada será registrada de forma anónima, tratada con estricta confidencialidad y analizada sin identificar a las personas o instituciones participantes.",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Acepto participar", "next": "2" },
+        { "text": "No acepto participar", "next": null }
+      ]
+    },
+    {
+      "id": "2",
+      "text": "Nombre de la clínica veterinaria",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "3",
+      "text": "Veterinaria/o responsable",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "4",
+      "text": "Teléfono",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "5",
+      "text": "Dirección",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "6",
+      "text": "Año de inicio",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "7",
+      "text": "Número de pacientes por semana",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Pequeña (<20 pacientes)" },
+        { "text": "Mediana (20-50 pacientes)" },
+        { "text": "Grande (>50 pacientes)" }
+      ]
+    },
+    {
+      "id": "8",
+      "text": "Desde junio de 2025 hasta la fecha, ¿con qué frecuencia ha tenido casos de posibles intoxicaciones?",
+      "type": "table",
+      "required": true,
+      "columns": ["Semanal", "Mensual", "Trimestral", "Ocasional (1-2 veces)", "Nunca"],
+      "rows": ["Felinos", "Caninos", "No tradicionales"]
+    },
+    {
+      "id": "9",
+      "text": "Ante la sospecha de un caso de intoxicación, ¿ha realizado alguna consulta a otro profesional u organismo?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": [
+        "Otro colega",
+        "Facultad de Veterinaria - UdelaR",
+        "CIAT",
+        "No realicé consulta",
+        "Otros"
+      ]
+    },
+    {
+      "id": "10",
+      "text": "¿Ha tenido alguna consulta con sospecha de intoxicación por pesticidas en felinos desde junio de 2025 a la fecha?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "11" },
+        { "text": "No", "next": "23" }
+      ]
+    },
+    {
+      "id": "11",
+      "text": "¿Con qué frecuencia en la clínica observa intoxicaciones por pesticidas en felinos?",
+      "type": "table",
+      "required": true,
+      "columns": ["1 (Nunca)", "2 (Raro)", "3 (Ocasional)", "4 (Frecuente)", "5 (Muy frecuente)"],
+      "rows": [
+        "Herbicidas (ej.: paraquat, diquat, glifosato)",
+        "Rodenticidas anticoagulantes (ej.: warfarina, bromadiolona, brodifacoum)",
+        "Endectocidas/lactonas macrocíclicas (ej.: ivermectina, doramectina, moxidectina)",
+        "Molusquicidas/metaldehído (ej.: cebo para caracoles/babosas)",
+        "Ectocidas-insecticidas: órganos fosforados/carbamatos (ej.: diazinón, carbaryl)",
+        "Piretroides y piretrinas (ej.: cipermetrina, permetrina; pipetas caninas, insecticidas tipo Raid®, Baygon®)",
+        "Ectocida: amitraz (ej.: Acarex®, baños, garrapaticidas, collares)"
+      ]
+    },
+    {
+      "id": "12",
+      "text": "Datos epidemiológicos: ¿Cuál categoría en felinos es la más frecuente afectada por pesticidas?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        "Cachorro (<1 año)",
+        "Adulto (1-7 años)",
+        "Senior (7-10 años)",
+        "Geronte (>10 años)"
+      ]
+    },
+    {
+      "id": "13",
+      "text": "¿Cuál es la circunstancia más frecuente en la que ocurren las intoxicaciones por pesticidas en felinos?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": [
+        "Accidental",
+        "Intencional/maliciosa",
+        "Desconocida"
+      ]
+    },
+    {
+      "id": "14",
+      "text": "En la mayoría de los casos, ¿la mascota tenía acceso al exterior?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        "Sí",
+        "No",
+        "No sabe/no recuerda"
+      ]
+    },
+    {
+      "id": "15",
+      "text": "Para el diagnóstico, usted se basó en:",
+      "type": "multiple_selection",
+      "required": true,
+      "options": [
+        "Anamnesis",
+        "Signos clínicos",
+        "Respuesta terapéutica"
+      ]
+    },
+    {
+      "id": "16",
+      "text": "¿Realizó estudios paraclínicos?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "17" },
+        { "text": "No", "next": "18" }
+      ]
+    },
+    {
+      "id": "17",
+      "text": "En caso de haber realizado estudios paraclínicos, ¿qué estudios realizó?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": [
+        "Hemograma",
+        "Bioquímica",
+        "RX",
+        "Ecografía",
+        "Crasis",
+        "Otros"
+      ]
+    },
+    {
+      "id": "18",
+      "text": "¿Realizó pruebas confirmatorias?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "19" },
+        { "text": "No", "next": "22" }
+      ]
+    },
+    {
+      "id": "19",
+      "text": "En los casos en que se realizaron pruebas confirmatorias, ¿cuál fue el agente de intoxicación presuntivo?",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "20",
+      "text": "¿Qué muestra/s remitió y qué análisis solicitó?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Respuesta abierta"]
+    },
+    {
+      "id": "21",
+      "text": "¿A qué laboratorio remitió?",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "22",
+      "text": "En caso de que no se realizaran pruebas confirmatorias, ¿por qué no se realizaron?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        "No fue posible muestrear",
+        "Muestra insuficiente",
+        "Desconozco que haya prueba",
+        "Ningún laboratorio realiza la prueba"
+      ]
+    },
+    {
+      "id": "23",
+      "text": "¿Ha tenido alguna consulta con sospecha de intoxicación por medicamentos de uso humano y/o veterinario en felinos desde junio de 2025 a la fecha?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "24" },
+        { "text": "No", "next": "35" }
+      ]
+    },
+    {
+      "id": "24",
+      "text": "¿Con qué frecuencia observa intoxicaciones por medicamentos en felinos?",
+      "type": "table",
+      "required": true,
+      "columns": ["1 (Nunca)", "2 (Raro)", "3 (Ocasional)", "4 (Frecuente)", "5 (Muy frecuente)"],
+      "rows": [
+        "AINEs",
+        "Benzodiacepinas",
+        "Paracetamol",
+        "Ácido acetilsalicílico"
+      ]
+    },
+    {
+      "id": "25",
+      "text": "Datos epidemiológicos: ¿Cuál categoría en felinos es la más frecuente afectada por medicamentos?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        "Cachorro (<1 año)",
+        "Adulto (1-7 años)",
+        "Senior (7-10 años)",
+        "Geronte (>10 años)"
+      ]
+    },
+    {
+      "id": "26",
+      "text": "¿Cuál es la circunstancia más frecuente en la que ocurren las intoxicaciones por medicamentos en felinos?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": [
+        "Accidental",
+        "Intencional/maliciosa",
+        "Desconocida"
+      ]
+    },
+    {
+      "id": "27",
+      "text": "Para el diagnóstico más frecuente, usted se basó en:",
+      "type": "multiple_selection",
+      "required": true,
+      "options": [
+        "Anamnesis",
+        "Signos clínicos",
+        "Respuesta terapéutica"
+      ]
+    },
+    {
+      "id": "28",
+      "text": "¿Realizó estudios paraclínicos?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "29" },
+        { "text": "No", "next": "30" }
+      ]
+    },
+    {
+      "id": "29",
+      "text": "¿Qué estudios paraclínicos realizó?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": [
+        "Hemograma",
+        "Bioquímica",
+        "RX",
+        "Ecografía",
+        "Crasis",
+        "Otros"
+      ]
+    },
+    {
+      "id": "30",
+      "text": "¿Realizó pruebas confirmatorias?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "31" },
+        { "text": "No", "next": "34" }
+      ]
+    },
+    {
+      "id": "31",
+      "text": "Si se realizaron pruebas confirmatorias, ¿cuál fue el agente de la intoxicación presuntiva?",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "32",
+      "text": "¿Qué muestra/s remitió y qué análisis solicitó?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Respuesta abierta"]
+    },
+    {
+      "id": "33",
+      "text": "¿A qué laboratorio remitió?",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "34",
+      "text": "En caso de que no se realizaran pruebas confirmatorias, ¿por qué no se realizaron?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        "No fue posible muestrear",
+        "Muestra insuficiente",
+        "Desconozco que haya prueba",
+        "Ningún laboratorio realiza la prueba"
+      ]
+    },
+    {
+      "id": "35",
+      "text": "¿Ha tenido casos con sospecha de intoxicación por plantas ornamentales en felinos desde junio de 2025 a la fecha?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "36" },
+        { "text": "No", "next": "43" }
+      ]
+    },
+    {
+      "id": "36",
+      "text": "¿Qué plantas identifica con mayor frecuencia en los casos de intoxicación en felinos?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": [
+        "Lirios (Lilium sp.)",
+        "Potus (Scindapsus aureus)",
+        "Estrella federal (Euphorbia pulcherrima)",
+        "Costilla de Adán (Monstera deliciosa)",
+        "Lirio de la paz (Spathiphyllum sp.)",
+        "Azalea (Rhododendron spp.)",
+        "Caña del mudo (Dieffenbachia sp.)",
+        "Marihuana (Cannabis spp.)",
+        "Laurel de jardín (Nerium oleander)",
+        "Jazmín paraguayo (Brunfelsia australis)",
+        "Otros",
+        "No identifico"
+      ]
+    },
+    {
+      "id": "37",
+      "text": "¿Con qué frecuencia observa intoxicaciones por plantas ornamentales en felinos?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        "1 (Nunca)",
+        "2 (Raro)",
+        "3 (Ocasional)",
+        "4 (Frecuente)",
+        "5 (Muy frecuente)"
+      ]
+    },
+    {
+      "id": "38",
+      "text": "Datos epidemiológicos: ¿Cuál categoría en felinos es la más frecuente afectada por plantas ornamentales?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        "Cachorro (<1 año)",
+        "Adulto (1-7 años)",
+        "Senior (7-10 años)",
+        "Geronte (>10 años)"
+      ]
+    },
+    {
+      "id": "39",
+      "text": "¿Cuál es la circunstancia más frecuente en la que ocurren las intoxicaciones por plantas ornamentales en felinos?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": [
+        "Accidental",
+        "Intencional/maliciosa",
+        "Desconocida"
+      ]
+    },
+    {
+      "id": "40",
+      "text": "Para el diagnóstico más frecuente, usted se basó en:",
+      "type": "multiple_selection",
+      "required": true,
+      "options": [
+        "Anamnesis",
+        "Signos clínicos",
+        "Respuesta terapéutica"
+      ]
+    },
+    {
+      "id": "41",
+      "text": "¿Realizó estudios paraclínicos?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "42" },
+        { "text": "No", "next": "43" }
+      ]
+    },
+    {
+      "id": "42",
+      "text": "¿Qué estudios paraclínicos realizó?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": [
+        "Hemograma",
+        "Bioquímica",
+        "RX",
+        "Ecografía",
+        "Crasis",
+        "Otros"
+      ]
+    },
+    {
+      "id": "43",
+      "text": "¿Ha tenido alguna consulta con sospecha de intoxicación por alimentos en felinos desde junio de 2025 a la fecha?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "44" },
+        { "text": "No", "next": "52" }
+      ]
+    },
+    {
+      "id": "44",
+      "text": "¿Con qué frecuencia en la clínica observa intoxicaciones por alimentos en felinos?",
+      "type": "table",
+      "required": true,
+      "columns": ["1 (Nunca)", "2 (Raro)", "3 (Ocasional)", "4 (Frecuente)", "5 (Muy frecuente)"],
+      "rows": ["Chocolate", "Masas", "Cebolla/Ajo/Puerro", "Uvas/pasas", "Xilitol (edulcorante)", "Hipervitaminosis A (hígado en exceso)"]
+    },
+    {
+      "id": "45",
+      "text": "¿Alguna otra intoxicación por alimentos que haya observado o considere relevante y no haya sido mencionada anteriormente?",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "46",
+      "text": "Datos epidemiológicos: ¿Cuál categoría en felinos es la más frecuente afectada por alimentos?",
+      "type": "selector",
+      "required": true,
+      "options": ["Cachorro (<1 año)", "Adulto (1-7 años)", "Senior (7-10 años)", "Geronte (>10 años)"]
+    },
+    {
+      "id": "47",
+      "text": "¿Cuál es la circunstancia más frecuente en la que ocurren las intoxicaciones por alimentos en felinos?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Accidental", "Intencional/maliciosa", "Desconocida"]
+    },
+    {
+      "id": "48",
+      "text": "En la mayoría de los casos, ¿la mascota tenía acceso al exterior?",
+      "type": "selector",
+      "required": true,
+      "options": ["Sí", "No", "No sabe/no recuerda"]
+    },
+    {
+      "id": "49",
+      "text": "Para el diagnóstico más frecuente, usted se basó en:",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Anamnesis", "Signos clínicos", "Respuesta terapéutica"]
+    },
+    {
+      "id": "50",
+      "text": "¿Realizó estudios paraclínicos?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "51" },
+        { "text": "No", "next": "52" }
+      ]
+    },
+    {
+      "id": "51",
+      "text": "¿Qué estudios paraclínicos realizó?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Hemograma", "Bioquímica", "RX", "Ecografía", "Crasis", "Otros"]
+    },
+    {
+      "id": "52",
+      "text": "¿Ha tenido alguna consulta con sospecha de intoxicación por agentes corrosivos, productos de limpieza u otros en felinos desde junio de 2025 a la fecha?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "53" },
+        { "text": "No", "next": "66" }
+      ]
+    },
+    {
+      "id": "53",
+      "text": "¿Con qué frecuencia en la clínica observa intoxicaciones por agentes/productos de limpieza en felinos?",
+      "type": "table",
+      "required": true,
+      "columns": ["1 (Nunca)", "2 (Raro)", "3 (Ocasional)", "4 (Frecuente)", "5 (Muy frecuente)"],
+      "rows": ["Alcohol", "Fenoles/desinfectantes", "Lavandina/Cloro", "Amonio cuaternario", "Detergentes alcalinos", "Aceites esenciales"]
+    },
+    {
+      "id": "54",
+      "text": "¿Alguna otra intoxicación que haya observado o considere relevante y no haya sido mencionada anteriormente?",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "55",
+      "text": "Datos epidemiológicos: ¿Cuál categoría en felinos es la más frecuente afectada por agentes/productos de limpieza?",
+      "type": "selector",
+      "required": true,
+      "options": ["Cachorro (<1 año)", "Adulto (1-7 años)", "Senior (7-10 años)", "Geronte (>10 años)"]
+    },
+    {
+      "id": "56",
+      "text": "¿Cuál es la circunstancia más frecuente en la que ocurren las intoxicaciones por agentes/productos de limpieza en felinos?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Accidental", "Intencional/maliciosa", "Desconocida"]
+    },
+    {
+      "id": "57",
+      "text": "En la mayoría de los casos, ¿la mascota tenía acceso al exterior?",
+      "type": "selector",
+      "required": true,
+      "options": ["Sí", "No", "No sabe/no recuerda"]
+    },
+    {
+      "id": "58",
+      "text": "Para el diagnóstico más frecuente, usted se basó en:",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Anamnesis", "Signos clínicos", "Respuesta terapéutica"]
+    },
+    {
+      "id": "59",
+      "text": "¿Realizó estudios paraclínicos?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "60" },
+        { "text": "No", "next": "61" }
+      ]
+    },
+    {
+      "id": "60",
+      "text": "¿Qué estudios paraclínicos realizó?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Hemograma", "Bioquímica", "RX", "Ecografía", "Crasis", "Otros"]
+    },
+    {
+      "id": "61",
+      "text": "¿Realizó pruebas confirmatorias?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "62" },
+        { "text": "No", "next": "65" }
+      ]
+    },
+    {
+      "id": "62",
+      "text": "¿Cuál fue el agente de la intoxicación presuntiva?",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "63",
+      "text": "¿Qué muestra/s remitió y qué análisis solicitó?",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "64",
+      "text": "¿A qué laboratorio remitió?",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "65",
+      "text": "¿Por qué no se realizaron pruebas confirmatorias?",
+      "type": "selector",
+      "required": true,
+      "options": ["No fue posible muestrear", "Muestra insuficiente", "Desconozco que haya prueba", "Ningún laboratorio realiza la prueba"]
+    },
+    {
+      "id": "66",
+      "text": "¿Existe algún tipo de intoxicación en felinos que no haya sido contemplada en la presente encuesta y que considere relevante mencionar?",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "67",
+      "text": "¿Ha tenido alguna consulta con sospecha de intoxicación por pesticidas en caninos desde junio de 2025 a la fecha?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "68" },
+        { "text": "No", "next": "81" }
+      ]
+    },
+    {
+      "id": "68",
+      "text": "¿Con qué frecuencia en la clínica observa intoxicaciones por pesticidas en caninos?",
+      "type": "table",
+      "required": true,
+      "columns": ["1 (Nunca)", "2 (Raro)", "3 (Ocasional)", "4 (Frecuente)", "5 (Muy frecuente)"],
+      "rows": [
+        "Herbicidas (ej.: paraquat, diquat, glifosato)",
+        "Rodenticidas anticoagulantes (ej.: warfarina, bromadiolona, brodifacoum)",
+        "Endectocidas/lactonas macrocíclicas (ej.: ivermectina, doramectina, moxidectina)",
+        "Molusquicidas/metaldehído (ej.: cebo para caracoles/babosas)",
+        "Ectocidas-insecticidas: órganos fosforados/carbamatos (ej.: diazinón, carbaryl)",
+        "Piretroides y piretrinas (ej.: cipermetrina, permetrina; insecticidas tipo Raid®, Baygon®)",
+        "Ectocida: amitraz (ej.: Acarex®, baños garrapaticidas, collares)"
+      ]
+    },
+    {
+      "id": "69",
+      "text": "¿Alguna otra intoxicación que haya observado o considere relevante y no haya sido mencionada anteriormente?",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "70",
+      "text": "Datos epidemiológicos: ¿Cuál categoría en caninos es la más frecuente afectada por pesticidas?",
+      "type": "selector",
+      "required": true,
+      "options": ["Cachorro (<1 año)", "Adulto (1-7 años)", "Senior (7-10 años)", "Geronte (>10 años)"]
+    },
+    {
+      "id": "71",
+      "text": "¿Cuál es la circunstancia más frecuente en la que ocurren las intoxicaciones por pesticidas en caninos?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Accidental", "Intencional/maliciosa", "Desconocida"]
+    },
+    {
+      "id": "72",
+      "text": "En la mayoría de los casos, ¿la mascota tenía acceso al exterior?",
+      "type": "selector",
+      "required": true,
+      "options": ["Sí", "No", "No sabe/no recuerda"]
+    },
+    {
+      "id": "73",
+      "text": "Para el diagnóstico más frecuente, usted se basó en:",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Anamnesis", "Signos clínicos", "Respuesta terapéutica"]
+    },
+    {
+      "id": "74",
+      "text": "¿Realizó estudios paraclínicos?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "75" },
+        { "text": "No", "next": "76" }
+      ]
+    },
+    {
+      "id": "75",
+      "text": "¿Qué estudios paraclínicos realizó?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Hemograma", "Bioquímica", "RX", "Ecografía", "Crasis", "Otros"]
+    },
+    {
+      "id": "76",
+      "text": "¿Realizó pruebas confirmatorias?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "77" },
+        { "text": "No", "next": "80" }
+      ]
+    },
+    {
+      "id": "77",
+      "text": "¿Cuál fue el agente de la intoxicación presuntiva?",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "78",
+      "text": "¿Qué muestra/s remitió y qué análisis solicitó?",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "79",
+      "text": "¿A qué laboratorio remitió?",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "80",
+      "text": "¿Por qué no se realizaron pruebas confirmatorias?",
+      "type": "selector",
+      "required": true,
+      "options": ["No fue posible muestrear", "Muestra insuficiente", "Desconozco que haya prueba", "Ningún laboratorio realiza la prueba"]
+    },
+    {
+      "id": "81",
+      "text": "¿Ha tenido alguna consulta con sospecha de intoxicación por medicamentos de uso humano o veterinario en caninos desde junio de 2025 a la fecha?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "82" },
+        { "text": "No", "next": "95" }
+      ]
+    },
+    {
+      "id": "82",
+      "text": "¿Con qué frecuencia en la clínica observa intoxicaciones por medicamentos en caninos?",
+      "type": "table",
+      "required": true,
+      "columns": ["1 (Nunca)", "2 (Raro)", "3 (Ocasional)", "4 (Frecuente)", "5 (Muy frecuente)"],
+      "rows": ["AINEs", "Benzodiacepinas", "Paracetamol", "Ácido acetilsalicílico"]
+    },
+    {
+      "id": "83",
+      "text": "¿Alguna otra intoxicación que haya observado o considere relevante y no haya sido mencionada anteriormente?",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "84",
+      "text": "Datos epidemiológicos: ¿Cuál categoría en caninos es la más frecuente afectada por medicamentos?",
+      "type": "selector",
+      "required": true,
+      "options": ["Cachorro (<1 año)", "Adulto (1-7 años)", "Senior (7-10 años)", "Geronte (>10 años)"]
+    },
+    {
+      "id": "85",
+      "text": "¿Cuál es la circunstancia más frecuente en la que ocurren las intoxicaciones por medicamentos en caninos?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Accidental", "Intencional/maliciosa", "Desconocida"]
+    },
+    {
+      "id": "86",
+      "text": "En la mayoría de los casos, ¿la mascota tenía acceso al exterior?",
+      "type": "selector",
+      "required": true,
+      "options": ["Sí", "No", "No sabe/no recuerda"]
+    },
+    {
+      "id": "87",
+      "text": "Para el diagnóstico más frecuente, usted se basó en:",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Anamnesis", "Signos clínicos", "Respuesta terapéutica"]
+    },
+    {
+      "id": "88",
+      "text": "¿Realizó estudios paraclínicos?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "89" },
+        { "text": "No", "next": "90" }
+      ]
+    },
+    {
+      "id": "89",
+      "text": "¿Qué estudios paraclínicos realizó?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Hemograma", "Bioquímica", "RX", "Ecografía", "Crasis", "Otros"]
+    },
+    {
+      "id": "90",
+      "text": "¿Realizó pruebas confirmatorias?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "91" },
+        { "text": "No", "next": "94" }
+      ]
+    },
+    {
+      "id": "91",
+      "text": "¿Cuál fue el agente de la intoxicación presuntiva?",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "92",
+      "text": "¿Qué muestra/s remitió y qué análisis solicitó?",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "93",
+      "text": "¿A qué laboratorio remitió?",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "94",
+      "text": "¿Por qué no se realizaron pruebas confirmatorias?",
+      "type": "selector",
+      "required": true,
+      "options": ["No fue posible muestrear", "Muestra insuficiente", "Desconozco que haya prueba", "Ningún laboratorio realiza la prueba"]
+    },
+    {
+      "id": "95",
+      "text": "¿Ha tenido alguna consulta con sospecha de intoxicación por plantas ornamentales en caninos desde junio de 2025 a la fecha?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "96" },
+        { "text": "No", "next": "103" }
+      ]
+    },
+    {
+      "id": "96",
+      "text": "¿Qué plantas identifica con mayor frecuencia en los casos de intoxicación en caninos?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": [
+        "Lirios (Lilium sp.)", "Paraíso (Melia azedarach)", "Palmera enana (Cycas revoluta)", "Amarilis (Hippeastrum sp.)",
+        "Trompeta de ángel (Brugmansia sp.)", "Azalea (Rhododendron spp.)", "Caña del mudo (Dieffenbachia sp.)", "Marihuana (Cannabis spp.)",
+        "Laurel de jardín (Nerium oleander)", "Jazmín paraguayo (Brunfelsia australis)", "Ricino (Ricinus communis)", "No identifico", "Otros"
+      ]
+    },
+    {
+      "id": "97",
+      "text": "¿Con qué frecuencia observa intoxicaciones por plantas ornamentales en caninos?",
+      "type": "selector",
+      "required": true,
+      "options": ["1 (Nunca)", "2 (Raro)", "3 (Ocasional)", "4 (Frecuente)", "5 (Muy frecuente)"]
+    },
+    {
+      "id": "98",
+      "text": "Datos epidemiológicos: ¿Cuál categoría en caninos es la más frecuente afectada por plantas ornamentales?",
+      "type": "selector",
+      "required": true,
+      "options": ["Cachorro (<1 año)", "Adulto (1-7 años)", "Senior (7-10 años)", "Geronte (>10 años)"]
+    },
+    {
+      "id": "99",
+      "text": "¿Cuál es la circunstancia más frecuente en la que ocurren las intoxicaciones por plantas ornamentales en caninos?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Accidental", "Intencional/maliciosa", "Desconocida"]
+    },
+    {
+      "id": "100",
+      "text": "Para el diagnóstico más frecuente, usted se basó en:",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Anamnesis", "Signos clínicos", "Respuesta terapéutica"]
+    },
+    {
+      "id": "101",
+      "text": "¿Realizó estudios paraclínicos?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "102" },
+        { "text": "No", "next": "103" }
+      ]
+    },
+    {
+      "id": "102",
+      "text": "¿Qué estudios paraclínicos realizó?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Hemograma", "Bioquímica", "RX", "Ecografía", "Crasis", "Otros"]
+    },
+    {
+      "id": "103",
+      "text": "¿Ha tenido alguna consulta con sospecha de intoxicación por alimentos en caninos desde junio de 2025 a la fecha?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "104" },
+        { "text": "No", "next": "112" }
+      ]
+    },
+    {
+      "id": "104",
+      "text": "¿Con qué frecuencia en la clínica observa intoxicaciones por alimentos en caninos?",
+      "type": "table",
+      "required": true,
+      "columns": ["1 (Nunca)", "2 (Raro)", "3 (Ocasional)", "4 (Frecuente)", "5 (Muy frecuente)"],
+      "rows": ["Chocolate", "Masas", "Cebolla/Ajo/Puerro", "Uvas/pasas", "Xilitol (edulcorante)", "Hipervitaminosis A (hígado en exceso)"]
+    },
+    {
+      "id": "105",
+      "text": "¿Alguna otra intoxicación por alimentos que haya observado o considere relevante y no haya sido mencionada anteriormente?",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "106",
+      "text": "Datos epidemiológicos: ¿Cuál categoría en caninos es la más frecuente afectada por alimentos?",
+      "type": "selector",
+      "required": true,
+      "options": ["Cachorro (<1 año)", "Adulto (1-7 años)", "Senior (7-10 años)", "Geronte (>10 años)"]
+    },
+    {
+      "id": "107",
+      "text": "¿Cuál es la circunstancia más frecuente en la que ocurren las intoxicaciones por alimentos en caninos?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Accidental", "Intencional/maliciosa", "Desconocida"]
+    },
+    {
+      "id": "108",
+      "text": "En la mayoría de los casos, ¿la mascota tenía acceso al exterior?",
+      "type": "selector",
+      "required": true,
+      "options": ["Sí", "No", "No sabe/no recuerda"]
+    },
+    {
+      "id": "109",
+      "text": "Para el diagnóstico más frecuente, usted se basó en:",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Anamnesis", "Signos clínicos", "Respuesta terapéutica"]
+    },
+    {
+      "id": "110",
+      "text": "¿Realizó estudios paraclínicos?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "111" },
+        { "text": "No", "next": "112" }
+      ]
+    },
+    {
+      "id": "111",
+      "text": "¿Qué estudios paraclínicos realizó?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Hemograma", "Bioquímica", "RX", "Ecografía", "Crasis", "Otros"]
+    },
+    {
+      "id": "112",
+      "text": "¿Ha tenido alguna consulta con sospecha de intoxicación por agentes corrosivos, productos de limpieza u otros en caninos desde junio de 2025 a la fecha?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "113" },
+        { "text": "No", "next": "126" }
+      ]
+    },
+    {
+      "id": "113",
+      "text": "¿Con qué frecuencia en la clínica observa intoxicaciones por agentes/productos de limpieza en caninos?",
+      "type": "table",
+      "required": true,
+      "columns": ["1 (Nunca)", "2 (Raro)", "3 (Ocasional)", "4 (Frecuente)", "5 (Muy frecuente)"],
+      "rows": ["Alcohol", "Fenoles/desinfectantes", "Lavandina/Cloro", "Amonio cuaternario", "Detergentes alcalinos", "Aceites esenciales"]
+    },
+    {
+      "id": "114",
+      "text": "¿Alguna otra intoxicación que haya observado o considere relevante y no haya sido mencionada anteriormente?",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "115",
+      "text": "Datos epidemiológicos: ¿Cuál categoría en caninos es la más frecuente afectada por agentes/productos de limpieza?",
+      "type": "selector",
+      "required": true,
+      "options": ["Cachorro (<1 año)", "Adulto (1-7 años)", "Senior (7-10 años)", "Geronte (>10 años)"]
+    },
+    {
+      "id": "116",
+      "text": "¿Cuál es la circunstancia más frecuente en la que ocurren las intoxicaciones por agentes/productos de limpieza en caninos?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Accidental", "Intencional/maliciosa", "Desconocida"]
+    },
+    {
+      "id": "117",
+      "text": "En la mayoría de los casos, ¿la mascota tenía acceso al exterior?",
+      "type": "selector",
+      "required": true,
+      "options": ["Sí", "No", "No sabe/no recuerda"]
+    },
+    {
+      "id": "118",
+      "text": "Para el diagnóstico más frecuente, usted se basó en:",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Anamnesis", "Signos clínicos", "Respuesta terapéutica"]
+    },
+    {
+      "id": "119",
+      "text": "¿Realizó estudios paraclínicos?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "120" },
+        { "text": "No", "next": "121" }
+      ]
+    },
+    {
+      "id": "120",
+      "text": "¿Qué estudios paraclínicos realizó?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Hemograma", "Bioquímica", "RX", "Ecografía", "Crasis", "Otros"]
+    },
+    {
+      "id": "121",
+      "text": "¿Realizó pruebas confirmatorias?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "122" },
+        { "text": "No", "next": "125" }
+      ]
+    },
+    {
+      "id": "122",
+      "text": "¿Cuál fue el agente de la intoxicación presuntiva?",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "123",
+      "text": "¿Qué muestra/s remitió y qué análisis solicitó?",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "124",
+      "text": "¿A qué laboratorio remitió?",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "125",
+      "text": "¿Por qué no se realizaron pruebas confirmatorias?",
+      "type": "selector",
+      "required": true,
+      "options": ["No fue posible muestrear", "Muestra insuficiente", "Desconozco que haya prueba", "Ningún laboratorio realiza la prueba"]
+    },
+    {
+      "id": "126",
+      "text": "¿Existe algún tipo de intoxicación en caninos que no haya sido contemplada en la presente encuesta y que considere relevante mencionar?",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "127",
+      "text": "¿Ha tenido alguna consulta con sospecha de intoxicación en animales no tradicionales desde junio de 2025 a la fecha?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "128" },
+        { "text": "No", "next": "131" }
+      ]
+    },
+    {
+      "id": "128",
+      "text": "¿En qué especies de animales no tradicionales ha observado intoxicaciones en la clínica?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Conejo", "Rata", "Cobayo", "Hámster", "Aves", "Hurón", "Erizo", "Tortuga", "Serpiente", "Lagarto", "Peces", "Otros"]
+    },
+    {
+      "id": "129",
+      "text": "Seleccione las intoxicaciones en animales no tradicionales que ha observado en la clínica.",
+      "type": "multiple_selection",
+      "required": true,
+      "options": [
+        "Organofosforados/carbamatos (diazinón, carbaryl)",
+        "Metaldehído (cebo para caracoles/babosas)",
+        "Rodenticidas anticoagulantes (veneno para ratas/warfarínicos)",
+        "Piretroides y piretrinas (cipermetrina, permetrina, pipetas caninas, insecticidas como Raid®)",
+        "Amitraz (Acarex®, baños, garrapaticidas)",
+        "Lactonas macrocíclicas (ivermectina, doramectina, moxidectina)",
+        "Herbicidas (paraquat, diquat, glifosato, otros)",
+        "Medicamentos de uso humano (paracetamol, ibuprofeno, ácido acetilsalicílico, etc.)",
+        "Productos de uso domiciliario (agentes corrosivos, de limpieza, desinfectantes)",
+        "Alimentos",
+        "Plantas ornamentales",
+        "Otros"
+      ]
+    },
+    {
+      "id": "130",
+      "text": "Describa brevemente algún caso de intoxicación en animales no tradicionales que considere relevante: epidemiología, agente involucrado y evolución clínica.",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "131",
+      "text": "¿Cree usted que en nuestro medio existen carencias para el diagnóstico de intoxicaciones en pequeños animales?",
+      "type": "selector",
+      "required": true,
+      "options": ["Sí", "No"]
+    },
+    {
+      "id": "132",
+      "text": "¿Ha contactado al área de Toxicología de Facultad de Veterinaria en alguna ocasión?",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Sí", "next": "133" },
+        { "text": "No", "next": "134" }
+      ]
+    },
+    {
+      "id": "133",
+      "text": "La respuesta fue:",
+      "type": "selector",
+      "required": true,
+      "options": [
+        { "text": "Satisfactoria", "next": "135" },
+        { "text": "Insatisfactoria", "next": "135" }
+      ]
+    },
+    {
+      "id": "134",
+      "text": "¿Por qué no contactó al área de Toxicología de Facultad de Veterinaria?",
+      "type": "selector",
+      "required": true,
+      "options": ["No lo he necesitado", "No lo he considerado"]
+    },
+    {
+      "id": "135",
+      "text": "¿Ante qué intoxicación considera usted que le sería de importancia contar con una prueba diagnóstica?",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "136",
+      "text": "¿Cómo cree usted que el área de Toxicología Veterinaria puede contribuir en los diagnósticos?",
+      "type": "multiple_selection",
+      "required": true,
+      "options": ["Análisis diagnósticos", "Cursos de actualización", "Comunicaciones periódicas en redes sociales", "Otros"]
+    },
+    {
+      "id": "137",
+      "text": "Consideraciones, intoxicaciones y/o comentarios que desee agregar.",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "138",
+      "text": "De ser necesario, ¿autoriza a ser contactado/a en un futuro para ampliar información sobre la presente encuesta?",
+      "type": "selector",
+      "required": false,
+      "options": ["Sí", "No"]
+    }
+  ]
+}

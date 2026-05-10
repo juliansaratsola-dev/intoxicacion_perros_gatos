@@ -62,9 +62,10 @@ def index():
                 with open(os.path.join(SURVEYS_DIR, fn), 'r', encoding='utf-8') as f:
                     meta = json.load(f)
                 surveys.append({'id': sid, 'title': meta.get('title', sid)})
-    return render_template('index.html', surveys=surveys)
+    return render_template('index.html', surveys=surveys, button_style=True)
 
-@app.route('/survey/<sid>')
+# Update the route for viewing a specific survey
+@app.route('/surveys/<sid>')
 def survey_view(sid):
     survey = load_survey(sid)
     if survey is None:
@@ -92,7 +93,7 @@ def survey_view(sid):
 
     return render_template('survey.html', survey=survey, sid=sid, description=description)
 
-@app.route('/survey/new')
+@app.route('/surveys/new')
 def new_survey():
     # Load the new survey JSON
     survey_path = os.path.join(BASE_DIR, 'files', 'encuesta_version.json')
@@ -332,7 +333,7 @@ def load_structured_survey():
 
     return jsonify({'status': 'success', 'survey': structured_survey})
 
-@app.route('/api/survey', methods=['GET'])
+@app.route('/api/surveys', methods=['GET'])
 def get_survey():
     survey_path = os.path.join(SURVEYS_DIR, 'encuesta_version.json')
     if not os.path.exists(survey_path):
@@ -364,6 +365,38 @@ def submit_response():
     conn.close()
 
     return jsonify({'status': 'success', 'message': 'Response submitted successfully'}), 201
+
+@app.route('/surveys', methods=['GET'])
+def get_surveys():
+    surveys = []
+    if os.path.exists(SURVEYS_DIR):
+        for fn in os.listdir(SURVEYS_DIR):
+            if fn.endswith('.json'):
+                sid = fn[:-5]
+                with open(os.path.join(SURVEYS_DIR, fn), 'r', encoding='utf-8') as f:
+                    meta = json.load(f)
+                surveys.append({'id': sid, 'title': meta.get('title', sid)})
+    return jsonify({'status': 'success', 'surveys': surveys}), 200
+
+@app.route('/surveys/main_encuesta.json', methods=['GET'])
+def get_main_encuesta():
+    survey_path = os.path.join(SURVEYS_DIR, 'main_encuesta.json')
+    if not os.path.exists(survey_path):
+        return jsonify({'status': 'error', 'message': 'Survey not found'}), 404
+
+    with open(survey_path, 'r', encoding='utf-8') as f:
+        survey_data = json.load(f)
+
+    return jsonify({'status': 'success', 'survey': survey_data}), 200
+
+@app.route('/surveys/<sid>.json', methods=['GET'])
+def get_survey_json(sid):
+    survey_path = os.path.join(SURVEYS_DIR, f'{sid}.json')
+    if not os.path.exists(survey_path):
+        return jsonify({'status': 'error', 'message': 'Survey not found'}), 404
+    with open(survey_path, 'r', encoding='utf-8') as f:
+        survey_data = json.load(f)
+    return jsonify({'status': 'success', 'survey': survey_data}), 200
 
 if __name__ == '__main__':
     os.makedirs(SURVEYS_DIR, exist_ok=True)
