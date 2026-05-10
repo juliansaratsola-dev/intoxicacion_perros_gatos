@@ -48,3 +48,61 @@ Ejemplo:
 # Descarga CSV anónimo (resp. que eligieron anonimato serán limpiados)
 curl -H "X-Admin-Token: mi_token" "http://127.0.0.1:5000/results/thesis_survey/export?anonymize=1" -o respuestas.csv
 ```
+
+# Encuesta de Intoxicaciones en Pequeños Animales
+
+Este proyecto tiene como objetivo desarrollar una aplicación web para la creación y gestión de encuestas sobre intoxicaciones en pequeños animales. A continuación, se describen los pasos para rediseñar la aplicación con un enfoque más moderno y escalable.
+
+## Pasos para el rediseño
+
+### 1. Crear una API RESTful para el backend
+- Usar un framework como Flask-RESTful o FastAPI.
+- Crear endpoints para manejar encuestas y respuestas:
+  - `GET /surveys`: Devuelve una lista de encuestas disponibles.
+  - `GET /surveys/<id>`: Devuelve los datos de una encuesta específica en formato JSON.
+  - `POST /surveys/<id>/responses`: Recibe y almacena las respuestas de una encuesta.
+
+### 2. Configurar un frontend moderno
+- Usar un framework como React, Vue o Angular para crear una interfaz de usuario interactiva.
+- Diseñar componentes reutilizables para preguntas, secciones y validaciones.
+
+### 3. Implementar una base de datos escalable
+- Usar PostgreSQL o MongoDB para manejar datos más complejos.
+- Crear tablas o colecciones para encuestas, preguntas y respuestas.
+
+### 4. Implementar lógica de condicionales
+- Mover la lógica de condicionales al backend para mayor control y seguridad.
+- Enviar las reglas de condicionales al frontend para aplicarlas dinámicamente.
+
+### 5. Implementar pruebas
+- Crear pruebas unitarias y de integración para el backend y el frontend.
+- Usar herramientas como `pytest` para el backend y `Jest` o `Cypress` para el frontend.
+
+### 6. Desplegar la aplicación
+- Usar contenedores Docker para empaquetar la aplicación.
+- Desplegar en un servicio en la nube como AWS, Google Cloud o Heroku.
+
+---
+
+## Paso 1: Crear una API RESTful para el backend
+
+En este paso, configuraremos una API RESTful para manejar las encuestas y las respuestas. Usaremos Flask-RESTful para este propósito.
+
+### Tareas:
+1. Instalar Flask-RESTful:
+   ```bash
+   pip install flask-restful
+   ```
+
+2. Crear un archivo `api.py` para definir los endpoints de la API.
+
+3. Implementar los siguientes endpoints:
+   - `GET /surveys`
+   - `GET /surveys/<id>`
+   - `POST /surveys/<id>/responses`
+
+4. Probar los endpoints con herramientas como Postman o cURL.
+
+---
+
+¿Listo para comenzar con el primer paso?

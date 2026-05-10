@@ -8,6 +8,8 @@ import csv
 import io
 from datetime import datetime
 from functools import wraps
+import argparse
+import hashlib
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SURVEYS_DIR = os.path.join(BASE_DIR, 'surveys')
@@ -90,6 +92,38 @@ def survey_view(sid):
 
     return render_template('survey.html', survey=survey, sid=sid, description=description)
 
+@app.route('/survey/new')
+def new_survey():
+    # Load the new survey JSON
+    survey_path = os.path.join(BASE_DIR, 'files', 'encuesta_version.json')
+    if not os.path.exists(survey_path):
+        return 'Encuesta no encontrada', 404
+
+    with open(survey_path, 'r', encoding='utf-8') as f:
+        survey = json.load(f)
+
+    description = (
+        "Encuesta de intoxicaciones en Pequeños Animales\n"
+        "Objetivos\n"
+        "Mediante la presente encuesta se pretende recabar información sobre las principales\n"
+        "intoxicaciones observadas en pequeños animales atendidos en clínicas veterinarias del\n"
+        "Uruguay. La información proporcionada deberá corresponder a casos registrados en el periodo\n"
+        "comprendido entre junio de 2025 y la actualidad.\n"
+        "Los datos obtenidos serán utilizados en el marco de un proyecto de investigación CIDEC y de\n"
+        "una tesis de grado de la Facultad de Veterinaria (UdelaR). A partir de los resultados relevados,\n"
+        "se busca contribuir a la puesta a punto en el Laboratorio de Toxicología en dicha institución,\n"
+        "de técnicas analíticas que permitan mejorar el diagnóstico de las intoxicaciones mencionadas.\n"
+        "La encuesta está organizada en tres bloques: datos generales, principales tóxicos en\n"
+        "veterinaria y consideraciones finales. Las preguntas referidas a los principales tóxicos se\n"
+        "agrupan en las siguientes categorías: pesticidas, medicamentos de uso veterinario,\n"
+        "medicamentos de uso humano, plantas y miscelanea.\n"
+        "Completar esta encuesta le llevará solo unos minutos. Toda información proporcionada es\n"
+        "estrictamente confidencial y se utilizará exclusivamente con fines académicos y de\n"
+        "investigación."
+    )
+
+    return render_template('survey.html', survey=survey, sid='new', description=description)
+
 @app.route('/submit/<sid>', methods=['POST'])
 def submit(sid):
     payload = request.get_json() or request.form.to_dict(flat=False)
@@ -122,6 +156,19 @@ def submit(sid):
     numeric_fields = {'age_years', 'weight_kg', 'time_since_exposure_hours'}
     email_field = 'contact_email'
 
+    # Funciones auxiliares para validaciones seguras
+    def safe_float(value):
+        try:
+            return float(value)
+        except (TypeError, ValueError):
+            return None
+
+    def safe_int(value):
+        try:
+            return int(value)
+        except (TypeError, ValueError):
+            return None
+
     for q in survey.get('questions', []):
         name = q.get('name')
         # skip validation if hidden by showIf
@@ -151,28 +198,32 @@ def submit(sid):
             if v.get('type') == 'number' and name in data and data.get(name) not in (None, ''):
                 try:
                     valnum = float(str(data.get(name)).replace(',', '.'))
-                    if v.get('min') is not None and valnum < float(v.get('min')):
+                    # Validaciones adicionales para conversiones
+                    min_value = safe_float(v.get('min'))
+                    if min_value is not None and valnum < min_value:
                         errors.append(f'El campo "{name}" es menor que el mínimo {v.get("min")}')
-                    if v.get('max') is not None and valnum > float(v.get('max')):
+                    max_value = safe_float(v.get('max'))
+                    if max_value is not None and valnum > max_value:
                         errors.append(f'El campo "{name}" es mayor que el máximo {v.get("max")}')
                 except Exception:
                     errors.append(f'El campo "{name}" debe ser numérico')
 
             # pattern
-            if v.get('pattern') and name in data and data.get(name):
+            pattern = v.get('pattern')
+            if pattern is not None and isinstance(pattern, str):
                 try:
-                    if not re.match(v.get('pattern'), str(data.get(name))):
+                    if not re.match(pattern, str(data.get(name))):
                         errors.append(f'El campo "{name}" no cumple el patrón requerido')
                 except re.error:
                     pass
 
             # min/max length
-            if v.get('minLength') and name in data and data.get(name):
-                if len(str(data.get(name))) < int(v.get('minLength')):
-                    errors.append(f'El campo "{name}" debe tener al menos {v.get("minLength")} caracteres')
-            if v.get('maxLength') and name in data and data.get(name):
-                if len(str(data.get(name))) > int(v.get('maxLength')):
-                    errors.append(f'El campo "{name}" debe tener como máximo {v.get("maxLength")} caracteres')
+            min_length = safe_int(v.get('minLength'))
+            if min_length is not None and data.get(name) is not None and len(str(data.get(name))) < min_length:
+                errors.append(f'El campo "{name}" debe tener al menos {v.get("minLength")} caracteres')
+            max_length = safe_int(v.get('maxLength'))
+            if max_length is not None and data.get(name) is not None and len(str(data.get(name))) > max_length:
+                errors.append(f'El campo "{name}" debe tener como máximo {v.get("maxLength")} caracteres')
 
         # fallback checks (kept for backward compatibility)
         if name in numeric_fields and name in data and data.get(name) not in (None, '') and not v.get('type'):
@@ -196,7 +247,7 @@ def submit(sid):
             data.pop('owner_name', None)
             data.pop('contact_email', None)
             # Also ensure allow_contact is set to NO for safety
-            data['allow_contact'] = 'NO'
+            data['allow_contact'] = ['NO']
     except Exception:
         pass
 
@@ -268,7 +319,7 @@ def export_csv(sid):
 
     output.seek(0)
     return send_file(io.BytesIO(output.getvalue().encode('utf-8')), mimetype='text/csv', as_attachment=True,
-                     attachment_filename=f'{sid}_responses.csv')
+                     download_name=f'{sid}_responses.csv')
 
 @app.route('/load_structured_survey', methods=['GET'])
 def load_structured_survey():
@@ -281,7 +332,46 @@ def load_structured_survey():
 
     return jsonify({'status': 'success', 'survey': structured_survey})
 
+@app.route('/api/survey', methods=['GET'])
+def get_survey():
+    survey_path = os.path.join(SURVEYS_DIR, 'encuesta_version.json')
+    if not os.path.exists(survey_path):
+        return jsonify({'status': 'error', 'message': 'Survey not found'}), 404
+
+    with open(survey_path, 'r', encoding='utf-8') as f:
+        survey_data = json.load(f)
+
+    # Include `showIf` logic in the survey data
+    for question in survey_data.get('questions', []):
+        if 'showIf' in question:
+            question['showIf'] = question['showIf']  # Ensure `showIf` is included as-is
+
+    return jsonify({'status': 'success', 'survey': survey_data}), 200
+
+@app.route('/api/submit', methods=['POST'])
+def submit_response():
+    data = request.get_json()
+    if not data or 'survey_id' not in data or 'responses' not in data:
+        return jsonify({'status': 'error', 'message': 'Invalid data'}), 400
+
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+    cur.execute(
+        'INSERT INTO responses (survey_id, response_json, submitted_at) VALUES (?, ?, ?)',
+        (data['survey_id'], json.dumps(data['responses']), datetime.now().isoformat())
+    )
+    conn.commit()
+    conn.close()
+
+    return jsonify({'status': 'success', 'message': 'Response submitted successfully'}), 201
+
 if __name__ == '__main__':
     os.makedirs(SURVEYS_DIR, exist_ok=True)
     init_db()
-    app.run(debug=True)
+
+    # Argument parser for dynamic port configuration
+    parser = argparse.ArgumentParser(description='Run the Flask application.')
+    parser.add_argument('--port', type=int, default=5000, help='Port to run the server on (default: 5000)')
+    args = parser.parse_args()
+
+    app.run(debug=True, port=args.port)

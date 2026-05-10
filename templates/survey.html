@@ -3,35 +3,45 @@
   <h2>{{ survey.title }}</h2>
   <p>{{ description or survey.description }}</p>
   <form id="surveyForm" novalidate>
-    {% for q in survey.questions %}
-      <div class="mb-3 question" id="q-{{ q.name }}" {% if q.showIf %}data-show-if='{{ q.showIf|tojson }}'{% endif %} {% if q.validation %}data-validation='{{ q.validation|tojson }}'{% endif %}>
-        <label class="form-label">{{ q.label }} {% if q.required %}*{% endif %}</label>
-        {% if q.type == 'radio' %}
-          <div>
-            {% for opt in q.options %}
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="{{ q.name }}" value="{{ opt }}" id="{{ q.name }}_{{ loop.index }}" {% if q.required and loop.first %}required{% endif %}>
-                <label class="form-check-label" for="{{ q.name }}_{{ loop.index }}">{{ opt }}</label>
-              </div>
-            {% endfor %}
-            <div class="invalid-feedback"></div>
+    {% for section_id, section in survey.items() %}
+      <h3>{{ section_id }}. {{ section.title }}</h3>
+      {% for subsection_id, subsection in section.subsections.items() %}
+        <h4>{{ subsection_id }}. {{ subsection.title }}</h4>
+        {% for question in subsection.questions %}
+          <div class="mb-3 question" id="q-{{ question.number }}">
+            <label class="form-label">{{ question.number }}. {{ question.text }}</label>
+            {% if question.type == 'text' %}
+              <input class="form-control" type="text" name="q-{{ question.number }}" required>
+            {% elif question.type == 'textarea' %}
+              <textarea class="form-control" name="q-{{ question.number }}" required></textarea>
+            {% elif question.type == 'select' %}
+              <select class="form-select" name="q-{{ question.number }}" required>
+                <option value="">Seleccione una opción</option>
+                {% for option in question.options %}
+                  <option value="{{ option.value }}">{{ option.text }}</option>
+                {% endfor %}
+              </select>
+            {% endif %}
           </div>
-        {% elif q.type == 'text' %}
-          <input class="form-control" type="text" name="{{ q.name }}" {% if q.required %}required{% endif %} {% if q.validation and q.validation.pattern %}pattern="{{ q.validation.pattern }}"{% endif %}>
-          <div class="invalid-feedback"></div>
-        {% elif q.type == 'textarea' %}
-          <textarea class="form-control" name="{{ q.name }}" {% if q.required %}required{% endif %} {% if q.validation and q.validation.pattern %}data-pattern="{{ q.validation.pattern }}"{% endif %}></textarea>
-          <div class="invalid-feedback"></div>
-        {% elif q.type == 'select' %}
-          <select class="form-select" name="{{ q.name }}" {% if q.required %}required{% endif %}>
-            <option value="">-- Seleccione --</option>
-            {% for opt in q.options %}
-              <option value="{{ opt }}">{{ opt }}</option>
-            {% endfor %}
-          </select>
-          <div class="invalid-feedback"></div>
-        {% endif %}
-      </div>
+        {% endfor %}
+      {% endfor %}
+      {% for question in section.questions %}
+        <div class="mb-3 question" id="q-{{ question.number }}">
+          <label class="form-label">{{ question.number }}. {{ question.text }}</label>
+          {% if question.type == 'text' %}
+            <input class="form-control" type="text" name="q-{{ question.number }}" required>
+          {% elif question.type == 'textarea' %}
+            <textarea class="form-control" name="q-{{ question.number }}" required></textarea>
+          {% elif question.type == 'select' %}
+            <select class="form-select" name="q-{{ question.number }}" required>
+              <option value="">Seleccione una opción</option>
+              {% for option in question.options %}
+                <option value="{{ option.value }}">{{ option.text }}</option>
+              {% endfor %}
+            </select>
+          {% endif %}
+        </div>
+      {% endfor %}
     {% endfor %}
     <button class="btn btn-primary" type="submit">Enviar</button>
   </form>
@@ -41,6 +51,7 @@
 {% block scripts %}
   <script src="/static/js/survey.js"></script>
   <script>
+    const surveyFile = '/surveys/main_encuesta.json';
     document.addEventListener('DOMContentLoaded', function(){
       Survey.init();
       const form = document.getElementById('surveyForm');

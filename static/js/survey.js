@@ -104,6 +104,32 @@ window.Survey = (function(){
         return;
       }
 
+      // handle matrix inputs
+      const matrixInputs = el.querySelectorAll('input[type="radio"]');
+      if (matrixInputs && matrixInputs.length){
+        const rows = new Set(matrixInputs.map(input => input.name.split('[')[1].split(']')[0]));
+        rows.forEach(row => {
+          const rowInputs = Array.from(matrixInputs).filter(input => input.name.includes(`[${row}]`));
+          if (required && !rowInputs.some(input => input.checked)) {
+            valid = false;
+            setFieldError(`${name}[${row}]`, 'Seleccione una opción para cada fila.');
+          }
+        });
+        return;
+      }
+
+      // handle rating inputs
+      const ratingInputs = el.querySelectorAll('input[type="range"]');
+      if (ratingInputs && ratingInputs.length){
+        ratingInputs.forEach(input => {
+          if (required && !input.value) {
+            valid = false;
+            setFieldError(input.name, 'Seleccione un valor.');
+          }
+        });
+        return;
+      }
+
       // other inputs
       const val = input ? input.value.trim() : '';
       // apply validation rules from data-validation if present
@@ -136,6 +162,18 @@ window.Survey = (function(){
     });
 
     return valid;
+  }
+
+  fetch('/surveys/main_encuesta.json')
+    .then(response => response.json())
+    .then(data => {
+      // Renderizar preguntas dinámicamente
+      renderSurvey(data);
+    });
+
+  function renderSurvey(data) {
+    // Implementar lógica para renderizar preguntas
+    console.log('Encuesta cargada:', data);
   }
 
   return { init: function(){ attachListeners(); updateVisibility(); }, updateVisibility, validateForm };

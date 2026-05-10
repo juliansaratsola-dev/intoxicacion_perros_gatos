@@ -1,0 +1,692 @@
+{
+    "1": {
+        "title": "Se le invita a participar de manera voluntaria en esta encuesta. La información *",
+        "subsections": {},
+        "questions": []
+    },
+    "2": {
+        "title": "Nombre de la Clínica Veterinaria*",
+        "subsections": {},
+        "questions": []
+    },
+    "3": {
+        "title": "Veterinaria/o responsable",
+        "subsections": {},
+        "questions": []
+    },
+    "4": {
+        "title": "Teléfono",
+        "subsections": {},
+        "questions": []
+    },
+    "5": {
+        "title": "Dirección",
+        "subsections": {},
+        "questions": []
+    },
+    "6": {
+        "title": "Año de inicio",
+        "subsections": {},
+        "questions": []
+    },
+    "7": {
+        "title": "N° de pacientes semanal*",
+        "subsections": {},
+        "questions": []
+    },
+    "8": {
+        "title": "Desde junio de 2025 a la fecha ¿con qué frecuencia ha tenido casos de posibles *",
+        "subsections": {},
+        "questions": []
+    },
+    "9": {
+        "title": "Ante la sospecha de un caso de intoxicación ¿ha realizado alguna consulta a otro *",
+        "subsections": {},
+        "questions": []
+    },
+    "10": {
+        "title": "¿Ha tenido alguna consulta con sospecha de intoxicación por pesticidas en felinos *",
+        "subsections": {},
+        "questions": []
+    },
+    "11": {
+        "title": "¿Con qué frecuencia en la clínica observa intoxicaciones por pesticidas en *",
+        "subsections": {},
+        "questions": []
+    },
+    "12": {
+        "title": "Datos epidemiológicos: ¿Cuál categoría en felinos es la más frecuente afectada *",
+        "subsections": {},
+        "questions": []
+    },
+    "13": {
+        "title": "¿Cuál es la circunstancia más frecuente en la que ocurren las intoxicaciones por *",
+        "subsections": {},
+        "questions": []
+    },
+    "14": {
+        "title": "En la mayoría de los casos, ¿la mascota tenía acceso al exterior?*",
+        "subsections": {},
+        "questions": []
+    },
+    "15": {
+        "title": "Para el diagnóstico usted se basó en: *",
+        "subsections": {},
+        "questions": []
+    },
+    "16": {
+        "title": "¿Realizó paraclínicos?*",
+        "subsections": {},
+        "questions": []
+    },
+    "17": {
+        "title": "¿Qué estudios paraclínicos realizó? *",
+        "subsections": {},
+        "questions": []
+    },
+    "18": {
+        "title": "¿Realizó pruebas confirmatorias?*",
+        "subsections": {},
+        "questions": []
+    },
+    "19": {
+        "title": "¿Cuál fue el agente de intoxicación presuntivo?*",
+        "subsections": {},
+        "questions": []
+    },
+    "20": {
+        "title": "¿Qué muestra/s remitió y que análisis solicitó?*",
+        "subsections": {},
+        "questions": []
+    },
+    "21": {
+        "title": "¿A qué laboratorio remitió?*",
+        "subsections": {},
+        "questions": []
+    },
+    "22": {
+        "title": "¿Por qué no se realizaron pruebas confirmatorias?*",
+        "subsections": {},
+        "questions": []
+    },
+    "23": {
+        "title": "¿Ha tenido sospecha de intoxicación por medicamentos humanos y/o veterinarios *",
+        "subsections": {},
+        "questions": []
+    },
+    "24": {
+        "title": "¿Con qué frecuencia observa intoxicaciones por medicamentos en felinos?*",
+        "subsections": {},
+        "questions": []
+    },
+    "25": {
+        "title": "Datos epidemiológicos: ¿Cuál categoría en felinos es la más frecuente afectada *",
+        "subsections": {},
+        "questions": []
+    },
+    "26": {
+        "title": "¿Cuál es la circunstancia más frecuente en la que ocurren las intoxicaciones por *",
+        "subsections": {},
+        "questions": []
+    },
+    "27": {
+        "title": "Para el diagnóstico más frecuente usted se basó en: *",
+        "subsections": {},
+        "questions": []
+    },
+    "28": {
+        "title": "¿Realizó paraclíncos?*",
+        "subsections": {},
+        "questions": []
+    },
+    "29": {
+        "title": "¿Qué estudios paraclínicos realizó? (Puede seleccionar más de una opción)*",
+        "subsections": {},
+        "questions": []
+    },
+    "30": {
+        "title": "¿Realizó pruebas confirmatorias?*",
+        "subsections": {},
+        "questions": []
+    },
+    "31": {
+        "title": "¿Cuál fue el agente de la intoxicación presuntiva?*",
+        "subsections": {},
+        "questions": []
+    },
+    "32": {
+        "title": "¿Qué muestra/s remitió y que análisis solicitó?*",
+        "subsections": {},
+        "questions": []
+    },
+    "33": {
+        "title": "¿A qué laboratorio remitió?*",
+        "subsections": {},
+        "questions": []
+    },
+    "34": {
+        "title": "¿Por qué no se realizaron pruebas confirmatorias?*",
+        "subsections": {},
+        "questions": []
+    },
+    "35": {
+        "title": "¿Ha tenido casos con sospecha de intoxicación por plantas ornamentales desde *",
+        "subsections": {},
+        "questions": []
+    },
+    "36": {
+        "title": "¿Qué plantas identifica con mayor frecuencia en los casos de intoxicación en *",
+        "subsections": {},
+        "questions": []
+    },
+    "37": {
+        "title": "¿Con qué frecuencia observa intoxicaciones por plantas ornamentales en felinos?*",
+        "subsections": {},
+        "questions": []
+    },
+    "38": {
+        "title": "Datos epidemiológicos: ¿Cuál categoría en felinos es la más frecuente afectada *",
+        "subsections": {},
+        "questions": []
+    },
+    "39": {
+        "title": "¿Qué circunstancia es más frecuente? (Puede seleccionar más de una opción)*",
+        "subsections": {},
+        "questions": []
+    },
+    "40": {
+        "title": "Para el diagnóstico más frecuente usted se basó en: *",
+        "subsections": {},
+        "questions": []
+    },
+    "41": {
+        "title": "¿Realizó paraclíncos?*",
+        "subsections": {},
+        "questions": []
+    },
+    "42": {
+        "title": "¿Qué estudios paraclínicos realizó? *",
+        "subsections": {},
+        "questions": []
+    },
+    "43": {
+        "title": "¿Ha tenido alguna consulta con sospecha de intoxicación por alimentos en *",
+        "subsections": {},
+        "questions": []
+    },
+    "44": {
+        "title": "¿Con qué frecuencia en la clínica observa intoxicaciones por alimentos en *",
+        "subsections": {},
+        "questions": []
+    },
+    "45": {
+        "title": "¿Alguna otra intoxicación que no se haya mencionado por alimentos?",
+        "subsections": {},
+        "questions": []
+    },
+    "46": {
+        "title": "Datos epidemiológicos: ¿Cuál categoría en felinos es la más frecuente afectada *",
+        "subsections": {},
+        "questions": []
+    },
+    "47": {
+        "title": "¿Qué circunstancia es más frecuente? (Puede seleccionar más de una opción)*",
+        "subsections": {},
+        "questions": []
+    },
+    "48": {
+        "title": "En la mayoría de los casos, ¿la mascota tenía acceso al exterior?*",
+        "subsections": {},
+        "questions": []
+    },
+    "49": {
+        "title": "*",
+        "subsections": {},
+        "questions": []
+    },
+    "50": {
+        "title": "¿Realizó estudios paraclínicos?*",
+        "subsections": {},
+        "questions": []
+    },
+    "51": {
+        "title": "¿Qué estudios paraclínicos realizó? *",
+        "subsections": {},
+        "questions": []
+    },
+    "52": {
+        "title": "¿Ha tenido alguna consulta con sospecha de intoxicación por agentes corrosivos, *",
+        "subsections": {},
+        "questions": []
+    },
+    "53": {
+        "title": "¿Con qué frecuencia en la clínica observa intoxicaciones por agentes de *",
+        "subsections": {},
+        "questions": []
+    },
+    "54": {
+        "title": "¿Alguna otra intoxicación que haya observado o crea relevante y no fue",
+        "subsections": {},
+        "questions": []
+    },
+    "55": {
+        "title": "Datos epidemiológicos: ¿Cuál categoría en felinos es la más frecuente afectada *",
+        "subsections": {},
+        "questions": []
+    },
+    "56": {
+        "title": "¿Qué circunstancia es más frecuente? (Puede seleccionar más de una opción)*",
+        "subsections": {},
+        "questions": []
+    },
+    "57": {
+        "title": "En la mayoría de los casos, ¿la mascota tenía acceso al exterior?*",
+        "subsections": {},
+        "questions": []
+    },
+    "58": {
+        "title": "Para el diagnóstico usted se basó en *",
+        "subsections": {},
+        "questions": []
+    },
+    "59": {
+        "title": "¿Realizó estudios paraclínicos?*",
+        "subsections": {},
+        "questions": []
+    },
+    "60": {
+        "title": "¿Qué estudios paraclínicos realizó? *",
+        "subsections": {},
+        "questions": []
+    },
+    "61": {
+        "title": "¿Realizó pruebas confirmatorias?*",
+        "subsections": {},
+        "questions": []
+    },
+    "62": {
+        "title": "¿Cuál fue el agente de la intoxicación presuntiva?*",
+        "subsections": {},
+        "questions": []
+    },
+    "63": {
+        "title": "¿Qué muestra/s remitió y que análisis solicitó?*",
+        "subsections": {},
+        "questions": []
+    },
+    "64": {
+        "title": "¿A qué laboratorio remitió?*",
+        "subsections": {},
+        "questions": []
+    },
+    "65": {
+        "title": "¿Por qué no se realizaron pruebas confirmatorias?*",
+        "subsections": {},
+        "questions": []
+    },
+    "66": {
+        "title": "¿Existe algún tipo de intoxicación en felinos que no haya sido contemplada en la",
+        "subsections": {},
+        "questions": []
+    },
+    "67": {
+        "title": "¿Ha tenido alguna consulta con sospecha de intoxicación por pesticidas en caninos *",
+        "subsections": {},
+        "questions": []
+    },
+    "68": {
+        "title": "¿Con qué frecuencia en la clínica observa intoxicaciones por pesticidas en *",
+        "subsections": {},
+        "questions": []
+    },
+    "69": {
+        "title": "¿Alguna otra intoxicación que haya observado o crea relevante y no fue",
+        "subsections": {},
+        "questions": []
+    },
+    "70": {
+        "title": "Datos epidemiológicos: ¿Cuál categoría en caninos es la más frecuente afectada *",
+        "subsections": {},
+        "questions": []
+    },
+    "71": {
+        "title": "¿Qué circunstancia es más frecuente? (Puede seleccionar más de una opción)*",
+        "subsections": {},
+        "questions": []
+    },
+    "72": {
+        "title": "En la mayoría de los casos, ¿la mascota tenía acceso al exterior?*",
+        "subsections": {},
+        "questions": []
+    },
+    "73": {
+        "title": "Para el diagnóstico usted se basó en *",
+        "subsections": {},
+        "questions": []
+    },
+    "74": {
+        "title": "¿Realizó estudios paraclínicos?*",
+        "subsections": {},
+        "questions": []
+    },
+    "75": {
+        "title": "¿Qué estudios paraclínicos realizó? *",
+        "subsections": {},
+        "questions": []
+    },
+    "76": {
+        "title": "¿Realizó pruebas confirmatorias?*",
+        "subsections": {},
+        "questions": []
+    },
+    "77": {
+        "title": "¿Cuál fue el agente de la intoxicación presuntiva?*",
+        "subsections": {},
+        "questions": []
+    },
+    "78": {
+        "title": "¿Qué muestra/s remitió y que análisis solicitó?*",
+        "subsections": {},
+        "questions": []
+    },
+    "79": {
+        "title": "¿A qué laboratorio remitió?*",
+        "subsections": {},
+        "questions": []
+    },
+    "80": {
+        "title": "¿Por qué no se realizaron pruebas confirmatorias?*",
+        "subsections": {},
+        "questions": []
+    },
+    "81": {
+        "title": "¿Ha tenido alguna consulta con sospecha de intoxicación por medicamentos de uso *",
+        "subsections": {},
+        "questions": []
+    },
+    "82": {
+        "title": "¿Con qué frecuencia observa intoxicaciones por medicamentos en caninos?*",
+        "subsections": {},
+        "questions": []
+    },
+    "83": {
+        "title": "¿Alguna otra intoxicación que haya observado o crea relevante y no fue",
+        "subsections": {},
+        "questions": []
+    },
+    "84": {
+        "title": "Datos epidemiológicos: ¿Cuál categoría en caninos es la más frecuente afectada *",
+        "subsections": {},
+        "questions": []
+    },
+    "85": {
+        "title": "¿Cuál es la circunstancia más frecuente en la que ocurren las intoxicaciones por *",
+        "subsections": {},
+        "questions": []
+    },
+    "86": {
+        "title": "En la mayoría de los casos, ¿la mascota tenía acceso al exterior?*",
+        "subsections": {},
+        "questions": []
+    },
+    "87": {
+        "title": "Para el diagnóstico más frecuente usted se basó en:*",
+        "subsections": {},
+        "questions": []
+    },
+    "88": {
+        "title": "¿Realizó paraclíncos?*",
+        "subsections": {},
+        "questions": []
+    },
+    "89": {
+        "title": "¿Qué estudios paraclínicos realizó? *",
+        "subsections": {},
+        "questions": []
+    },
+    "90": {
+        "title": "¿Realizó pruebas confirmatorias?*",
+        "subsections": {},
+        "questions": []
+    },
+    "91": {
+        "title": "¿Cuál fue el agente de la intoxicación presuntiva?*",
+        "subsections": {},
+        "questions": []
+    },
+    "92": {
+        "title": "¿Qué muestra/s remitió y que análisis solicitó?*",
+        "subsections": {},
+        "questions": []
+    },
+    "93": {
+        "title": "¿A qué laboratorio remitió?*",
+        "subsections": {},
+        "questions": []
+    },
+    "94": {
+        "title": "¿Por qué no se realizaron pruebas confirmatorias?*",
+        "subsections": {},
+        "questions": []
+    },
+    "95": {
+        "title": "¿Ha tenido alguna consulta con sospecha de intoxicación por plantas ornamentales *",
+        "subsections": {},
+        "questions": []
+    },
+    "96": {
+        "title": "¿Qué plantas identifica con mayor frecuencia en los casos de intoxicación en *",
+        "subsections": {},
+        "questions": []
+    },
+    "97": {
+        "title": "¿Con qué frecuencia observa intoxicaciones con plantas ornamentales en *",
+        "subsections": {},
+        "questions": []
+    },
+    "98": {
+        "title": "Datos epidemiológicos: ¿Cuál categoría en caninos es la más frecuente afectada *",
+        "subsections": {},
+        "questions": []
+    },
+    "99": {
+        "title": "¿Qué circunstancia es más frecuente? (Puede seleccionar más de una opción)*",
+        "subsections": {},
+        "questions": []
+    },
+    "100": {
+        "title": "Para el diagnóstico más frecuente usted se basó en:*",
+        "subsections": {},
+        "questions": []
+    },
+    "101": {
+        "title": "¿Realizó paraclíncos?*",
+        "subsections": {},
+        "questions": []
+    },
+    "102": {
+        "title": "¿Qué estudios paraclínicos realizó? *",
+        "subsections": {},
+        "questions": []
+    },
+    "103": {
+        "title": "¿Ha tenido alguna consulta con sospecha de intoxicación por alimentos en *",
+        "subsections": {},
+        "questions": []
+    },
+    "104": {
+        "title": "¿Con qué frecuencia en la clínica observa intoxicaciones por alimentos en *",
+        "subsections": {},
+        "questions": []
+    },
+    "105": {
+        "title": "¿Alguna otra intoxicación que no se haya mencionado por alimentos?",
+        "subsections": {},
+        "questions": []
+    },
+    "106": {
+        "title": "Datos epidemiológicos: ¿Cuál categoría en caninos es la más frecuente *",
+        "subsections": {},
+        "questions": []
+    },
+    "107": {
+        "title": "¿Qué circunstancia es más frecuente? (Puede seleccionar más de una opción)*",
+        "subsections": {},
+        "questions": []
+    },
+    "108": {
+        "title": "En la mayoría de los casos, ¿la mascota tenía acceso al exterior?*",
+        "subsections": {},
+        "questions": []
+    },
+    "109": {
+        "title": "*",
+        "subsections": {},
+        "questions": []
+    },
+    "110": {
+        "title": "¿Realizó estudios paraclínicos?*",
+        "subsections": {},
+        "questions": []
+    },
+    "111": {
+        "title": "¿Qué estudios paraclínicos realizó? *",
+        "subsections": {},
+        "questions": []
+    },
+    "112": {
+        "title": "¿Ha tenido alguna consulta con sospecha de intoxicación por agentes corrosivos, *",
+        "subsections": {},
+        "questions": []
+    },
+    "113": {
+        "title": "¿Con qué frecuencia en la clínica observa intoxicaciones por agentes de *",
+        "subsections": {},
+        "questions": []
+    },
+    "114": {
+        "title": "¿Alguna otra intoxicación que haya observado o crea relevante y no fue",
+        "subsections": {},
+        "questions": []
+    },
+    "115": {
+        "title": "Datos epidemiológicos: ¿Cuál categoría en caninos es la más frecuente *",
+        "subsections": {},
+        "questions": []
+    },
+    "116": {
+        "title": "¿Qué circunstancia es más frecuente? (Puede seleccionar más de una opción)*",
+        "subsections": {},
+        "questions": []
+    },
+    "117": {
+        "title": "En la mayoría de los casos, ¿la mascota tenía acceso al exterior?*",
+        "subsections": {},
+        "questions": []
+    },
+    "118": {
+        "title": "Para el diagnóstico usted se basó en *",
+        "subsections": {},
+        "questions": []
+    },
+    "119": {
+        "title": "¿Realizó estudios paraclínicos?*",
+        "subsections": {},
+        "questions": []
+    },
+    "120": {
+        "title": "¿Qué estudios paraclínicos realizó? *",
+        "subsections": {},
+        "questions": []
+    },
+    "121": {
+        "title": "¿Realizó pruebas confirmatorias?*",
+        "subsections": {},
+        "questions": []
+    },
+    "122": {
+        "title": "¿Cuál fue el agente de la intoxicación presuntiva?*",
+        "subsections": {},
+        "questions": []
+    },
+    "123": {
+        "title": "¿Qué muestra/s remitió y que análisis solicitó?*",
+        "subsections": {},
+        "questions": []
+    },
+    "124": {
+        "title": "¿A qué laboratorio remitió?*",
+        "subsections": {},
+        "questions": []
+    },
+    "125": {
+        "title": "¿Por qué no se realizaron pruebas confirmatorias?*",
+        "subsections": {},
+        "questions": []
+    },
+    "126": {
+        "title": "¿Existe algún tipo de intoxicación en caninos que no haya sido contemplada en la",
+        "subsections": {},
+        "questions": []
+    },
+    "127": {
+        "title": "¿Ha tenido alguna consulta con sospecha de intoxicación en animales no *",
+        "subsections": {},
+        "questions": []
+    },
+    "128": {
+        "title": "¿En qué especies de animales no tradicionales ha observado intoxicaciones en *",
+        "subsections": {},
+        "questions": []
+    },
+    "129": {
+        "title": "Seleccione las intoxicaciones en animales no tradicionales que ha observado en *",
+        "subsections": {},
+        "questions": []
+    },
+    "130": {
+        "title": "Describa brevemente algún caso de intoxicación en animales no tradicionales que",
+        "subsections": {},
+        "questions": []
+    },
+    "131": {
+        "title": "¿Cree usted que en nuestro medio existen carencias para el diagnóstico de *",
+        "subsections": {},
+        "questions": []
+    },
+    "132": {
+        "title": "¿Ha contactado al área de toxicolgía de Facultad de Veterinaria en alguna *",
+        "subsections": {},
+        "questions": []
+    },
+    "133": {
+        "title": "La respuesta fue*",
+        "subsections": {},
+        "questions": []
+    },
+    "134": {
+        "title": "¿Por qué?*",
+        "subsections": {},
+        "questions": []
+    },
+    "135": {
+        "title": "¿Ante qué intoxicación considera usted que le sería de importancia contar con",
+        "subsections": {},
+        "questions": []
+    },
+    "136": {
+        "title": "¿Cómo cree usted que el área de Toxicología Veterinaria puede contribuir en los *",
+        "subsections": {},
+        "questions": []
+    },
+    "137": {
+        "title": "Consideraciones, intoxicaciones y/o comentarios que desee agregar.",
+        "subsections": {},
+        "questions": []
+    },
+    "138": {
+        "title": "De ser necesario, ¿autoriza a ser contactado/a en un futuro para ampliar",
+        "subsections": {},
+        "questions": []
+    }
+}
