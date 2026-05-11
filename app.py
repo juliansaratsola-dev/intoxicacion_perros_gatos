@@ -10,10 +10,40 @@ from datetime import datetime
 from functools import wraps
 import argparse
 import hashlib
+import openpyxl
+from openpyxl.styles import Font, PatternFill, Alignment
+import psycopg2
+import psycopg2.extras
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SURVEYS_DIR = os.path.join(BASE_DIR, 'surveys')
 DB_PATH = os.path.join(BASE_DIR, 'instance', 'survey.db')
+EXCEL_DIR = os.path.join(BASE_DIR, 'instance', 'exports')
+
+# PostgreSQL connection string — override via env var PG_DSN
+PG_DSN = os.environ.get(
+    'PG_DSN',
+    'host=localhost dbname=survey.db user=julian.saratsola'
+)
+
+def get_pg_conn():
+    return psycopg2.connect(PG_DSN)
+
+def save_to_postgres(survey_id, data):
+    try:
+        conn = get_pg_conn()
+        cur = conn.cursor()
+        cur.execute(
+            'INSERT INTO survey_submissions (survey_id, response_json) VALUES (%s, %s)',
+            (survey_id, json.dumps(data, ensure_ascii=False))
+        )
+        conn.commit()
+        cur.close()
+        conn.close()
+        return True
+    except Exception as e:
+        print(f'[PG] Error saving to postgres: {e}')
+        return False
 
 app = Flask(__name__)
 CORS(app)
@@ -349,22 +379,125 @@ def get_survey():
 
     return jsonify({'status': 'success', 'survey': survey_data}), 200
 
+def append_to_excel(survey_id, data, survey_questions):
+    """Append a response row to the Excel file for this survey."""
+    os.makedirs(EXCEL_DIR, exist_ok=True)
+    filepath = os.path.join(EXCEL_DIR, f'{survey_id}_responses.xlsx')
+
+    # Build ordered question list for column headers
+    q_ids = [q['id'] for q in survey_questions]
+    q_texts = {q['id']: q['text'] for q in survey_questions}
+
+    if os.path.exists(filepath):
+        wb = openpyxl.load_workbook(filepath)
+        ws = wb.active or wb.create_sheet('Respuestas')
+    else:
+        wb = openpyxl.Workbook()
+        ws = wb.active or wb.create_sheet('Respuestas')
+        ws.title = 'Respuestas'
+
+        # Header row — submission metadata
+        header_meta = ['ID envío', 'Fecha y hora']
+        header_qs   = [f'{qid}. {q_texts.get(qid, qid)}' for qid in q_ids]
+        headers     = header_meta + header_qs
+
+        header_font = Font(bold=True, color='FFFFFF', size=11)
+        header_fill = PatternFill('solid', fgColor='6B21A8')
+        header_align = Alignment(wrap_text=True, vertical='center')
+
+        ws.append(headers)
+        for cell in ws[1]:
+            cell.font   = header_font
+            cell.fill   = header_fill
+            cell.alignment = header_align
+
+        # Column widths
+        ws.column_dimensions['A'].width = 12
+        ws.column_dimensions['B'].width = 22
+        for col_idx in range(3, len(headers) + 1):
+            ws.column_dimensions[
+                openpyxl.utils.get_column_letter(col_idx)
+            ].width = 40
+
+        ws.row_dimensions[1].height = 50
+        ws.freeze_panes = 'C2'
+
+    # Next submission id = current row count (excluding header)
+    submission_id = ws.max_row  # header row counts as 1, so first data row → id=1
+
+    # Build row values
+    def fmt(val):
+        if isinstance(val, list):
+            return ' | '.join(str(v) for v in val)
+        if isinstance(val, dict):
+            return ' | '.join(f'{k}: {v}' for k, v in val.items())
+        return str(val) if val is not None else ''
+
+    row = [submission_id, datetime.now().strftime('%Y-%m-%d %H:%M:%S')]
+    for qid in q_ids:
+        row.append(fmt(data.get(qid, '')))
+
+    ws.append(row)
+
+    # Zebra striping
+    row_idx = ws.max_row
+    fill = PatternFill('solid', fgColor='F3E8FF') if row_idx % 2 == 0 else PatternFill('solid', fgColor='FFFFFF')
+    for cell in ws[row_idx]:
+        cell.fill = fill
+        cell.alignment = Alignment(wrap_text=True, vertical='top')
+
+    wb.save(filepath)
+    return filepath
+
+
 @app.route('/api/submit', methods=['POST'])
 def submit_response():
     data = request.get_json()
     if not data or 'survey_id' not in data or 'responses' not in data:
         return jsonify({'status': 'error', 'message': 'Invalid data'}), 400
 
+    survey_id = data['survey_id']
+    responses = data['responses']
+
+    # Load survey for question order / texts
+    survey = load_survey(survey_id)
+    questions = survey.get('questions', []) if survey else []
+
+    # 1. Save to SQLite (existing)
+    init_db()
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
     cur.execute(
         'INSERT INTO responses (survey_id, response_json, submitted_at) VALUES (?, ?, ?)',
-        (data['survey_id'], json.dumps(data['responses']), datetime.now().isoformat())
+        (survey_id, json.dumps(responses, ensure_ascii=False), datetime.now().isoformat())
     )
     conn.commit()
     conn.close()
 
-    return jsonify({'status': 'success', 'message': 'Response submitted successfully'}), 201
+    # 2. Save to PostgreSQL
+    save_to_postgres(survey_id, responses)
+
+    # 3. Append to Excel file
+    try:
+        append_to_excel(survey_id, responses, questions)
+    except Exception as e:
+        print(f'[Excel] Error: {e}')
+
+    return jsonify({'status': 'success', 'message': 'Respuesta guardada exitosamente'}), 201
+
+
+@app.route('/api/export/excel/<sid>')
+@require_admin
+def export_excel(sid):
+    filepath = os.path.join(EXCEL_DIR, f'{sid}_responses.xlsx')
+    if not os.path.exists(filepath):
+        return jsonify({'status': 'error', 'message': 'No hay respuestas aún'}), 404
+    return send_file(
+        filepath,
+        mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        as_attachment=True,
+        download_name=f'{sid}_respuestas.xlsx'
+    )
 
 @app.route('/surveys', methods=['GET'])
 def get_surveys():
