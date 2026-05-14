@@ -24,10 +24,16 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
 
-      - name: Instalar dependencias
+      - name: Instalar dependencias Python
         run: |
           pip install -r requirements.txt
           pip install pyinstaller
+
+      - name: Construir frontend React
+        run: |
+          cd frontend
+          npm install
+          npm run build
 
       - name: Compilar ejecutable
         run: |
@@ -35,6 +41,7 @@ jobs:
             --add-data "templates;templates" `
             --add-data "static;static" `
             --add-data "surveys;surveys" `
+            --add-data "frontend/build;frontend_build" `
             --name EncuestasVet `
             app.py
 

@@ -25,12 +25,24 @@ call .venv\Scripts\activate.bat
 echo [2/3] Instalando PyInstaller...
 pip install pyinstaller --quiet
 
+echo [2b/3] Construyendo el frontend React...
+pushd frontend
+call npm install --silent
+call npm run build
+popd
+if not exist "frontend\build\index.html" (
+    echo ERROR: El build de React fallo. Revisa los mensajes de arriba.
+    pause
+    exit /b 1
+)
+
 echo [3/3] Compilando ejecutable (puede tardar unos minutos)...
 echo.
 pyinstaller --onefile ^
   --add-data "templates;templates" ^
   --add-data "static;static" ^
   --add-data "surveys;surveys" ^
+  --add-data "frontend\build;frontend_build" ^
   --name EncuestasVet ^
   --icon NONE ^
   app.py

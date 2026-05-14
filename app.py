@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, redirect, url_for, send_file
+from flask import Flask, render_template, request, jsonify, redirect, url_for, send_file, send_from_directory
 from flask_cors import CORS
 import sqlite3
 import json
@@ -34,6 +34,7 @@ else:
 SURVEYS_DIR = os.path.join(BASE_DIR, 'surveys')
 DB_PATH = os.path.join(BASE_DIR, 'instance', 'survey.db')
 EXCEL_DIR = os.path.join(BASE_DIR, 'instance', 'exports')
+REACT_BUILD_DIR = os.path.join(BUNDLE_DIR, 'frontend_build')
 
 # PostgreSQL connection string — override via env var PG_DSN
 PG_DSN = os.environ.get(
@@ -554,6 +555,31 @@ def get_survey_json(sid):
     with open(survey_path, 'r', encoding='utf-8') as f:
         survey_data = json.load(f)
     return jsonify({'status': 'success', 'survey': survey_data}), 200
+
+# ---------------------------------------------------------------------------
+# Serve React SPA (catch-all) — must be the LAST route defined
+# Flask API routes above take priority; everything else serves the React app.
+# ---------------------------------------------------------------------------
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve_react(path):
+    if os.path.isdir(REACT_BUILD_DIR):
+        # Serve real static files from the React build (JS, CSS, images)
+        target = os.path.join(REACT_BUILD_DIR, path)
+        if path and os.path.isfile(target):
+            return send_from_directory(REACT_BUILD_DIR, path)
+        # All other paths → index.html (React Router handles the rest)
+        return send_from_directory(REACT_BUILD_DIR, 'index.html')
+    # Fallback: original Jinja2 index when React build is not present
+    surveys = []
+    if os.path.exists(SURVEYS_DIR):
+        for fn in os.listdir(SURVEYS_DIR):
+            if fn.endswith('.json'):
+                sid = fn[:-5]
+                with open(os.path.join(SURVEYS_DIR, fn), 'r', encoding='utf-8') as f:
+                    meta = json.load(f)
+                surveys.append({'id': sid, 'title': meta.get('title', sid)})
+    return render_template('index.html', surveys=surveys)
 
 if __name__ == '__main__':
     os.makedirs(SURVEYS_DIR, exist_ok=True)
