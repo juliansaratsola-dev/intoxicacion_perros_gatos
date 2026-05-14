@@ -34,7 +34,11 @@ else:
 SURVEYS_DIR = os.path.join(BASE_DIR, 'surveys')
 DB_PATH = os.path.join(BASE_DIR, 'instance', 'survey.db')
 EXCEL_DIR = os.path.join(BASE_DIR, 'instance', 'exports')
-REACT_BUILD_DIR = os.path.join(BUNDLE_DIR, 'frontend_build')
+# En el exe: BUNDLE_DIR/frontend_build  |  En dev: proyecto/frontend/build
+if getattr(sys, 'frozen', False):
+    REACT_BUILD_DIR = os.path.join(BUNDLE_DIR, 'frontend_build')
+else:
+    REACT_BUILD_DIR = os.path.join(BASE_DIR, 'frontend', 'build')
 
 # PostgreSQL connection string — override via env var PG_DSN
 PG_DSN = os.environ.get(
