@@ -1,0 +1,64 @@
+name: Build & Release EncuestasVet (Windows)
+
+# Se ejecuta automaticamente cuando subes un tag que empieza con "v"
+# Ejemplo: git tag v1.0.0 && git push origin v1.0.0
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-windows:
+    name: Compilar exe y publicar Release
+    runs-on: windows-latest
+
+    steps:
+      - name: Descargar codigo fuente
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt
+          pip install pyinstaller
+
+      - name: Compilar ejecutable
+        run: |
+          pyinstaller --onefile `
+            --add-data "templates;templates" `
+            --add-data "static;static" `
+            --add-data "surveys;surveys" `
+            --name EncuestasVet `
+            app.py
+
+      - name: Empaquetar ZIP distribuible
+        run: |
+          New-Item -ItemType Directory -Path EncuestasVet-Windows
+          Copy-Item dist\EncuestasVet.exe EncuestasVet-Windows\
+          Copy-Item -Recurse surveys EncuestasVet-Windows\surveys
+          Copy-Item config.example.json EncuestasVet-Windows\config.json
+          Copy-Item LEEME.txt EncuestasVet-Windows\
+          New-Item -ItemType Directory -Path EncuestasVet-Windows\instance
+          Compress-Archive -Path EncuestasVet-Windows\* -DestinationPath EncuestasVet-Windows.zip -Force
+
+      - name: Publicar GitHub Release con el ZIP
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "EncuestasVet ${{ github.ref_name }}"
+          files: EncuestasVet-Windows.zip
+          body: |
+            ## Instrucciones para estudiantes
+
+            1. Descarga **EncuestasVet-Windows.zip** (abajo en "Assets")
+            2. Descomprime en cualquier carpeta de tu computadora
+            3. Abre `config.json` con el Bloc de notas y cambia el valor de `ADMIN_TOKEN`
+            4. Doble clic en `EncuestasVet.exe` — el navegador se abre solo
+
+            > Si Windows muestra "protegió tu PC", haz clic en **Más información** → **Ejecutar de todas formas**.
+
+            Ver `LEEME.txt` para más detalles.

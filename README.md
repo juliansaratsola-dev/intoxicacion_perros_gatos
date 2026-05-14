@@ -1,5 +1,48 @@
 # Encuestas (demo local)
 
+## Descarga rápida para estudiantes (sin instalar nada)
+
+Ve a la sección **[Releases](../../releases)** del repositorio en GitHub y descarga `EncuestasVet-Windows.zip` de la última versión.
+
+> No necesitas instalar Python ni ningún programa adicional.
+
+---
+
+## Distribución portátil para Windows (sin instalar Python)
+
+Para distribuir la app a estudiantes que no tienen Python instalado, genera un ejecutable `.exe`:
+
+**Paso 1 — Compilar (solo una vez, en tu máquina):**
+```powershell
+# Crear entorno virtual e instalar dependencias (si aún no lo hiciste)
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+
+# Compilar el ejecutable (tarda ~2-3 min la primera vez)
+.\build_exe.bat
+```
+
+**Paso 2 — Empaquetar en ZIP para distribuir:**
+```powershell
+.\package.bat
+```
+Esto genera `EncuestasVet-Windows.zip`. Distribuye ese ZIP a los estudiantes.
+
+**Paso 3 — Los estudiantes solo necesitan:**
+1. Descomprimir el ZIP
+2. Editar `config.json` con su `ADMIN_TOKEN`
+3. Doble clic en `EncuestasVet.exe` → el navegador se abre solo
+
+> Ver `LEEME.txt` para instrucciones detalladas destinadas a los estudiantes.
+
+**Token de administrador:**  
+Edita `config.json` y cambia `"ADMIN_TOKEN"` por un valor propio antes de compilar/distribuir.  
+También se puede pasar vía variable de entorno `ADMIN_TOKEN` (tiene prioridad sobre `config.json`).
+
+---
+
+
 Proyecto mínimo para ejecutar encuestas localmente (desktop-first). Cada encuesta se define como JSON en la carpeta `surveys/`.
 
 Requisitos:

@@ -4,8 +4,10 @@ import sqlite3
 import json
 import re
 import os
+import sys
 import csv
 import io
+import hashlib
 from datetime import datetime
 from functools import wraps
 import argparse
@@ -15,7 +17,20 @@ from openpyxl.styles import Font, PatternFill, Alignment
 import psycopg2
 import psycopg2.extras
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# ---------------------------------------------------------------------------
+# PyInstaller compatibility
+# When frozen (--onefile exe), sys.executable is the .exe path and
+# sys._MEIPASS is the temp dir where bundled assets are extracted.
+# Mutable data (surveys, DB) live next to the exe; read-only assets
+# (templates, static) are bundled inside the exe via --add-data.
+# ---------------------------------------------------------------------------
+if getattr(sys, 'frozen', False):
+    BASE_DIR = os.path.dirname(sys.executable)   # directory of the .exe
+    BUNDLE_DIR = sys._MEIPASS                     # bundled templates/static
+else:
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    BUNDLE_DIR = BASE_DIR
+
 SURVEYS_DIR = os.path.join(BASE_DIR, 'surveys')
 DB_PATH = os.path.join(BASE_DIR, 'instance', 'survey.db')
 EXCEL_DIR = os.path.join(BASE_DIR, 'instance', 'exports')
@@ -45,11 +60,20 @@ def save_to_postgres(survey_id, data):
         print(f'[PG] Error saving to postgres: {e}')
         return False
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder=os.path.join(BUNDLE_DIR, 'templates'),
+    static_folder=os.path.join(BUNDLE_DIR, 'static'),
+)
 CORS(app)
 
-# Admin token for protecting results/endpoints. Set via env var `ADMIN_TOKEN`.
-ADMIN_TOKEN = os.environ.get('ADMIN_TOKEN', 'changeme')
+# Admin token: env var > config.json > fallback 'changeme'
+_config_path = os.path.join(BASE_DIR, 'config.json')
+_config: dict = {}
+if os.path.exists(_config_path):
+    with open(_config_path, 'r', encoding='utf-8') as _f:
+        _config = json.load(_f)
+ADMIN_TOKEN = os.environ.get('ADMIN_TOKEN') or _config.get('ADMIN_TOKEN', 'changeme')
 
 def require_admin(f):
     @wraps(f)
@@ -540,4 +564,10 @@ if __name__ == '__main__':
     parser.add_argument('--port', type=int, default=5000, help='Port to run the server on (default: 5000)')
     args = parser.parse_args()
 
-    app.run(debug=True, port=args.port)
+    # Auto-open browser when running as packaged exe
+    if getattr(sys, 'frozen', False):
+        import threading, webbrowser
+        url = f'http://127.0.0.1:{args.port}'
+        threading.Timer(1.5, lambda: webbrowser.open(url)).start()
+    debug = os.environ.get('FLASK_DEBUG', '0') == '1'
+    app.run(host='127.0.0.1', port=args.port, debug=debug)

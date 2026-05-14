@@ -1,0 +1,59 @@
+=====================================================================
+  ENCUESTAS VET  -  Instrucciones de uso
+  Proyecto de investigacion - Facultad de Veterinaria (UdelaR)
+=====================================================================
+
+COMO INICIAR LA APLICACION
+----------------------------
+1. Extraiga TODOS los archivos de este ZIP en una carpeta de su
+   computadora (por ejemplo: C:\EncuestasVet\).
+
+2. Haga doble clic en  EncuestasVet.exe
+
+3. Se abrira una ventana negra (consola) y luego el navegador
+   automaticamente en:  http://127.0.0.1:5000
+
+   Si el navegador NO se abre solo, copie esa direccion y
+   peguela en Chrome, Firefox o Edge.
+
+4. Para cerrar la aplicacion, cierre la ventana negra (consola).
+
+NOTA IMPORTANTE
+----------------
+No cierre la ventana negra mientras usa la encuesta.
+Esa ventana es el servidor local que mantiene la app funcionando.
+
+BASE DE DATOS / RESPUESTAS
+----------------------------
+Las respuestas se guardan automaticamente en la carpeta "instance"
+que se crea junto al ejecutable la primera vez que inicia la app.
+
+Haga copias de seguridad de  instance\survey.db  regularmente.
+
+ACCESO DE ADMINISTRADOR (solo para la investigadora)
+------------------------------------------------------
+Para ver los resultados o exportar CSV, abra en el navegador:
+
+  http://127.0.0.1:5000/results/thesis_survey?admin_token=TU_TOKEN
+
+El token esta en el archivo  config.json  (campo "ADMIN_TOKEN").
+Cambie ese token por uno propio antes de distribuir la aplicacion.
+
+Exportar respuestas como CSV:
+  http://127.0.0.1:5000/results/thesis_survey/export?admin_token=TU_TOKEN&anonymize=1
+
+PROBLEMAS COMUNES
+------------------
+* "Windows protegió su PC" -> haga clic en "Mas informacion" y luego
+  "Ejecutar de todas formas". Es una advertencia normal para .exe
+  no firmados digitalmente.
+
+* Puerto ocupado: si aparece un error "Address already in use",
+  cierre otras instancias del programa y vuelva a intentarlo.
+
+* Antivirus bloquea el exe: agregue la carpeta de la app como
+  excepcion en su antivirus.
+
+=====================================================================
+  Contacto: [completar con email de la investigadora]
+=====================================================================

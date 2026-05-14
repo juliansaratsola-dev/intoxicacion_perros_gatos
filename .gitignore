@@ -1,0 +1,36 @@
+# Entorno virtual Python
+.venv/
+venv/
+env/
+
+# Base de datos local (contiene respuestas reales — NO subir)
+instance/
+*.db
+*.sqlite3
+
+# Token de admin local (cada uno configura el suyo)
+config.json
+
+# Artefactos de PyInstaller
+dist/
+build/
+*.spec
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Cache de pytest
+.pytest_cache/
+.coverage
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Paquete de distribución generado localmente
+EncuestasVet-Windows/
+EncuestasVet-Windows.zip
