@@ -3,45 +3,54 @@
   <h2>{{ survey.title }}</h2>
   <p>{{ description or survey.description }}</p>
   <form id="surveyForm" novalidate>
-    {% for section_id, section in survey.items() %}
-      <h3>{{ section_id }}. {{ section.title }}</h3>
-      {% for subsection_id, subsection in section.subsections.items() %}
-        <h4>{{ subsection_id }}. {{ subsection.title }}</h4>
-        {% for question in subsection.questions %}
-          <div class="mb-3 question" id="q-{{ question.number }}">
-            <label class="form-label">{{ question.number }}. {{ question.text }}</label>
-            {% if question.type == 'text' %}
-              <input class="form-control" type="text" name="q-{{ question.number }}" required>
-            {% elif question.type == 'textarea' %}
-              <textarea class="form-control" name="q-{{ question.number }}" required></textarea>
-            {% elif question.type == 'select' %}
-              <select class="form-select" name="q-{{ question.number }}" required>
-                <option value="">Seleccione una opción</option>
-                {% for option in question.options %}
-                  <option value="{{ option.value }}">{{ option.text }}</option>
-                {% endfor %}
-              </select>
-            {% endif %}
-          </div>
-        {% endfor %}
-      {% endfor %}
-      {% for question in section.questions %}
-        <div class="mb-3 question" id="q-{{ question.number }}">
-          <label class="form-label">{{ question.number }}. {{ question.text }}</label>
-          {% if question.type == 'text' %}
-            <input class="form-control" type="text" name="q-{{ question.number }}" required>
-          {% elif question.type == 'textarea' %}
-            <textarea class="form-control" name="q-{{ question.number }}" required></textarea>
-          {% elif question.type == 'select' %}
-            <select class="form-select" name="q-{{ question.number }}" required>
-              <option value="">Seleccione una opción</option>
-              {% for option in question.options %}
-                <option value="{{ option.value }}">{{ option.text }}</option>
-              {% endfor %}
-            </select>
-          {% endif %}
-        </div>
-      {% endfor %}
+    {% for question in survey.questions %}
+      {%- set qid = question.id or question.name or loop.index %}
+      <div class="mb-3 question" id="q-{{ qid }}"
+        {% if question.showIf %}data-show-if='{{ question.showIf | tojson }}'{% endif %}>
+        <label class="form-label fw-semibold">{{ qid }}. {{ question.text }}</label>
+
+        {% if question.type in ('text',) %}
+          <input class="form-control" type="text" name="{{ qid }}"
+            {% if question.required %}required{% endif %}>
+
+        {% elif question.type in ('textarea',) %}
+          <textarea class="form-control" name="{{ qid }}"
+            {% if question.required %}required{% endif %}></textarea>
+
+        {% elif question.type in ('select', 'selector') %}
+          <select class="form-select" name="{{ qid }}"
+            {% if question.required %}required{% endif %}>
+            <option value="">Seleccione una opción</option>
+            {% for option in question.options %}
+              {%- set oval = option.value if option.value is defined else option.text %}
+              <option value="{{ oval }}">{{ option.text }}</option>
+            {% endfor %}
+          </select>
+
+        {% elif question.type == 'radio' %}
+          {% for option in question.options %}
+            {%- set oval = option.value if option.value is defined else option.text %}
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="{{ qid }}"
+                id="{{ qid }}_{{ loop.index }}" value="{{ oval }}"
+                {% if question.required %}required{% endif %}>
+              <label class="form-check-label" for="{{ qid }}_{{ loop.index }}">{{ option.text }}</label>
+            </div>
+          {% endfor %}
+
+        {% elif question.type == 'checkbox' %}
+          {% for option in question.options %}
+            {%- set oval = option.value if option.value is defined else option.text %}
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="{{ qid }}"
+                id="{{ qid }}_{{ loop.index }}" value="{{ oval }}">
+              <label class="form-check-label" for="{{ qid }}_{{ loop.index }}">{{ option.text }}</label>
+            </div>
+          {% endfor %}
+        {% endif %}
+
+        <div class="invalid-feedback"></div>
+      </div>
     {% endfor %}
     <button class="btn btn-primary" type="submit">Enviar</button>
   </form>
@@ -51,7 +60,6 @@
 {% block scripts %}
   <script src="/static/js/surveys.js"></script>
   <script>
-    const surveyFile = '/surveys/main_encuesta.json';
     document.addEventListener('DOMContentLoaded', function(){
       Survey.init();
       const form = document.getElementById('surveyForm');
@@ -81,7 +89,7 @@
             form.reset();
             Survey.updateVisibility();
           })
-          .catch(err=>{
+          .catch(()=>{
             document.getElementById('message').innerHTML = '<div class="alert alert-danger">Error al enviar.</div>';
           });
       });
