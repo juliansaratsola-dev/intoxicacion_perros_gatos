@@ -392,7 +392,6 @@ const SurveyDetail = () => {
   const visitedIndices = survey.questions
     .map((_, idx) => idx)
     .filter((idx) => visited.has(idx));
-  const visitedIndicesSet = visited;
 
   const formatAnswer = (q, val) => {
     if (val === undefined || val === null || val === '') return null;
