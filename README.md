@@ -1,4 +1,46 @@
-# Encuestas (demo local)
+# Encuestas de intoxicaciones en pequeños animales
+
+## Inicio rápido para desarrolladores
+
+> Requisitos previos: [Python 3.8+](https://www.python.org/downloads/) y [Node.js LTS](https://nodejs.org/) instalados en el sistema.
+
+```powershell
+# 1. Clonar el repositorio
+git clone https://github.com/juliansaratsola-dev/intoxicacion_perros_gatos.git
+cd intoxicacion_perros_gatos
+
+# 2. Ejecutar el script de setup (instala todo automáticamente)
+.\setup.bat
+```
+
+El script `setup.bat`:
+- Verifica que Python y Node.js estén instalados
+- Crea el entorno virtual `.venv` e instala las dependencias Python
+- Instala las dependencias del frontend React (`npm install`)
+- Crea `config.json` a partir de `config.example.json` si no existe
+- Crea las carpetas necesarias (`instance/`, `instance/exports/`)
+
+**Después del setup, correr en dos terminales:**
+
+```powershell
+# Terminal 1 — Backend Flask
+.venv\Scripts\activate
+python app.py
+```
+
+```powershell
+# Terminal 2 — Frontend React (dev con hot-reload)
+cd frontend
+npm start
+```
+
+| URL | Descripción |
+|-----|-------------|
+| http://localhost:3000 | UI React (desarrollo) |
+| http://127.0.0.1:5000 | API Flask |
+| http://127.0.0.1:5000/results/main_encuesta?admin_token=TU_TOKEN | Panel de resultados |
+
+---
 
 ## Descarga rápida para estudiantes (sin instalar nada)
 
